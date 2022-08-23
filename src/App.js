@@ -1,8 +1,8 @@
 import { Switch, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
-import Buy from "./pages/Buy";
-import Cart from "./pages/Cart";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 import MobileAppShowcaseV2 from "./pages/MobileAppShowcaseV2";
 import MobileAppShowcaseV1 from "./pages/MobileAppShowcaseV1";
 
@@ -17,13 +17,13 @@ function App() {
         <Route path="/mobile-v2">
           <MobileAppShowcaseV2 />
         </Route>
-        <Route path="/buy">
-          <Buy />
+        <Route path="/about">
+          <About />
         </Route>
-        <Route path="/cart">
-          <Cart />
+        <Route path="/contact">
+          <Contact />
         </Route>
-        <Route path="/">
+        <Route path="/home">
           <Home />
         </Route>
       </Switch>

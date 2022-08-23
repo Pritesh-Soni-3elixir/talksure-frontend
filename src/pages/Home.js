@@ -11,7 +11,7 @@ import PageLoadingSpinner from "../components/PageLoadingSpinner/PageLoadingSpin
 const Home = () => {
   return (
     <>
-      <PageLoadingSpinner />
+      {/* <PageLoadingSpinner /> */}
       <main className="page-wrapper">
         <Navbar />
         <HeroHome />

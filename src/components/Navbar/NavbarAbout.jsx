@@ -1,15 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const NavbarAbout = () => {
   return (
     <div>
-      <header className="header navbar navbar-expand-lg bg-light shadow-sm fixed-top">
+      <header className="header navbar navbar-expand-lg position-absolute navbar-sticky">
         <div className="container px-3">
-          <Link to="/home">
+          <a href="index-2.html" className="navbar-brand pe-3">
             <img src="assets/img/logo.svg" width="47" alt="Silicon" />
-          </Link>
-          Silicon
+            Silicon
+          </a>
           <div id="navbarNav" className="offcanvas offcanvas-end">
             <div className="offcanvas-header border-bottom">
               <h5 className="offcanvas-title">Menu</h5>
@@ -25,9 +24,8 @@ const Navbar = () => {
                 <li className="nav-item dropdown">
                   <a
                     href="#"
-                    className="nav-link dropdown-toggle active"
+                    className="nav-link dropdown-toggle"
                     data-bs-toggle="dropdown"
-                    aria-current="page"
                   >
                     Landings
                   </a>
@@ -36,29 +34,32 @@ const Navbar = () => {
                       <div
                         className="mega-dropdown-column bg-position-center bg-repeat-0 bg-size-cover rounded-3 rounded-end-0"
                         style={{
-                          backgroundImage: "url(assets / img / landings.jpg)",
+                          backgroundImage: "url(assets/img/landings.jpg)",
                           margin: "-1px",
                         }}
                       ></div>
                       <div className="mega-dropdown-column pt-lg-3 pb-lg-4">
                         <ul className="list-unstyled mb-0">
                           <li>
-                            <Link to="/" className="dropdown-item">
+                            <a href="index-2.html" className="dropdown-item">
                               Template Intro Page
-                            </Link>
-                            {/* <a href="index-2.html" className="dropdown-item">
-                              Template Intro Page
-                            </a> */}
+                            </a>
                           </li>
                           <li>
-                            <Link to="/mobile-v1" className="dropdown-item">
+                            <a
+                              href="landing-mobile-app-showcase-v1.html"
+                              className="dropdown-item"
+                            >
                               Mobile App Showcase v.1
-                            </Link>
+                            </a>
                           </li>
                           <li>
-                            <Link to="/mobile-v2" className="dropdown-item">
+                            <a
+                              href="landing-mobile-app-showcase-v2.html"
+                              className="dropdown-item"
+                            >
                               Mobile App Showcase v.2
-                            </Link>
+                            </a>
                           </li>
                           <li>
                             <a
@@ -152,7 +153,7 @@ const Navbar = () => {
                 <li className="nav-item dropdown">
                   <a
                     href="#"
-                    className="nav-link dropdown-toggle"
+                    className="nav-link dropdown-toggle active"
                     data-bs-toggle="dropdown"
                   >
                     Pages
@@ -163,9 +164,12 @@ const Navbar = () => {
                         <h6 className="px-3 mb-2">About</h6>
                         <ul className="list-unstyled mb-3">
                           <li>
-                            <Link to="/about" className="dropdown-item py-1">
+                            <a
+                              href="about-v1.html"
+                              className="dropdown-item py-1"
+                            >
                               About v.1
-                            </Link>
+                            </a>
                           </li>
                           <li>
                             <a
@@ -339,9 +343,12 @@ const Navbar = () => {
                         <h6 className="px-3 mb-2">Contacts</h6>
                         <ul className="list-unstyled mb-3">
                           <li>
-                            <Link to="/contact" className="dropdown-item py-1">
+                            <a
+                              href="contacts-v1.html"
+                              className="dropdown-item py-1"
+                            >
                               Contacts v.1
-                            </Link>
+                            </a>
                           </li>
                           <li>
                             <a
@@ -363,9 +370,12 @@ const Navbar = () => {
                         <h6 className="px-3 mb-2">Specialty</h6>
                         <ul className="list-unstyled">
                           <li>
-                            <Link to="/" className="dropdown-item py-1">
+                            <a
+                              href="404-v1.html"
+                              className="dropdown-item py-1"
+                            >
                               404 Error v.1
-                            </Link>
+                            </a>
                           </li>
                           <li>
                             <a
@@ -480,13 +490,13 @@ const Navbar = () => {
             />
             <label
               className="form-check-label d-none d-sm-block"
-              htmlFor="theme-mode"
+              for="theme-mode"
             >
               Light
             </label>
             <label
               className="form-check-label d-none d-sm-block"
-              htmlFor="theme-mode"
+              for="theme-mode"
             >
               Dark
             </label>
@@ -517,4 +527,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavbarAbout;

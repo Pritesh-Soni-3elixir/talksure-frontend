@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar/Navbar";
 
-const Contact = () => {
+const Error404 = () => {
   return (
     <div>
       <div>
@@ -14,4 +14,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Error404;

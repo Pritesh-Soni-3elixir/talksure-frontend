@@ -9,7 +9,7 @@ import TradingFeature from "../components/TradingFeature/TradingFeature";
 const MobileAppShowcaseV2 = () => {
   return (
     <div>
-      <PageLoadingSpinner />
+      {/* <PageLoadingSpinner /> */}
       <main className="page-wrapper">
         <Navbar />
         <HeroMobilev2 />

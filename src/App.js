@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import MobileAppShowcaseV2 from "./pages/MobileAppShowcaseV2";
 import MobileAppShowcaseV1 from "./pages/MobileAppShowcaseV1";
+import Error404 from "./pages/Error404";
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
         </Route>
         <Route path="/home">
           <Home />
+        </Route>
+        <Route path="/">
+          <Error404 />
         </Route>
       </Switch>
     </div>

@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import "./Error404Content.scss";
 
 const Error404Content = () => {
   return (
@@ -29,13 +31,14 @@ const Error404Content = () => {
               The page you are looking for was moved, removed or might never
               existed.
             </p>
-            <a
-              href="index-2.html"
+            <Link
+              to="/home"
               class="btn btn-lg btn-primary shadow-primary w-sm-auto w-100"
             >
               <i class="bx bx-home-alt me-2 ms-n1 lead"></i>
               Go to homepage
-            </a>
+            </Link>
+            {/* <button className="test">Test</button> */}
           </div>
         </div>
       </div>

@@ -6,12 +6,20 @@ import Contact from "./pages/Contact";
 import MobileAppShowcaseV2 from "./pages/MobileAppShowcaseV2";
 import MobileAppShowcaseV1 from "./pages/MobileAppShowcaseV1";
 import Error404 from "./pages/Error404";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsAndCondition from "./pages/TermsAndCondition";
 
 function App() {
   return (
     <div>
       {/* the first match will be rendered, so more specific path should be on top */}
       <Switch>
+        <Route path="/privacy-policy">
+          <PrivacyPolicy />
+        </Route>
+        <Route path="/terms-and-condition">
+          <TermsAndCondition />
+        </Route>
         <Route path="/mobile-v1">
           <MobileAppShowcaseV1 />
         </Route>

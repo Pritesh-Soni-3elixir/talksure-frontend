@@ -1,0 +1,18 @@
+$btnColor:#6366f1;
+$btnHoverColor: #4044ee;
+
+.test{
+    background-color: $btnColor;
+    border: none;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    color: white;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0.5rem 1.125rem -0.5rem rgb(99 102 241 / 90%);
+}
+
+.test:hover{
+    background-color: $btnHoverColor;
+    box-shadow: none;
+}

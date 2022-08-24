@@ -363,7 +363,7 @@ const Navbar = () => {
                         <h6 className="px-3 mb-2">Specialty</h6>
                         <ul className="list-unstyled">
                           <li>
-                            <Link to="/" className="dropdown-item py-1">
+                            <Link to="/error404" className="dropdown-item py-1">
                               404 Error v.1
                             </Link>
                           </li>

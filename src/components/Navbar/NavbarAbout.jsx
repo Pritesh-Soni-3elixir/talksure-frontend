@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const NavbarAbout = () => {
   return (
@@ -46,12 +47,15 @@ const NavbarAbout = () => {
                             </a>
                           </li>
                           <li>
-                            <a
+                            {/* <a
                               href="landing-mobile-app-showcase-v1.html"
                               className="dropdown-item"
-                            >
+                              >
                               Mobile App Showcase v.1
-                            </a>
+                            </a> */}
+                            <Link to="/home" className="dropdown-item">
+                              Mobile App Showcase v.1
+                            </Link>
                           </li>
                           <li>
                             <a
@@ -164,12 +168,9 @@ const NavbarAbout = () => {
                         <h6 className="px-3 mb-2">About</h6>
                         <ul className="list-unstyled mb-3">
                           <li>
-                            <a
-                              href="about-v1.html"
-                              className="dropdown-item py-1"
-                            >
+                            <Link to="/about" className="dropdown-item py-1">
                               About v.1
-                            </a>
+                            </Link>
                           </li>
                           <li>
                             <a
@@ -343,12 +344,9 @@ const NavbarAbout = () => {
                         <h6 className="px-3 mb-2">Contacts</h6>
                         <ul className="list-unstyled mb-3">
                           <li>
-                            <a
-                              href="contacts-v1.html"
-                              className="dropdown-item py-1"
-                            >
+                            <Link className="dropdown-item py-1" to="/contact">
                               Contacts v.1
-                            </a>
+                            </Link>
                           </li>
                           <li>
                             <a
@@ -370,12 +368,9 @@ const NavbarAbout = () => {
                         <h6 className="px-3 mb-2">Specialty</h6>
                         <ul className="list-unstyled">
                           <li>
-                            <a
-                              href="404-v1.html"
-                              className="dropdown-item py-1"
-                            >
+                            <Link className="dropdown-item py-1" to="/error404">
                               404 Error v.1
-                            </a>
+                            </Link>
                           </li>
                           <li>
                             <a
@@ -490,13 +485,13 @@ const NavbarAbout = () => {
             />
             <label
               className="form-check-label d-none d-sm-block"
-              for="theme-mode"
+              htmlFor="theme-mode"
             >
               Light
             </label>
             <label
               className="form-check-label d-none d-sm-block"
-              for="theme-mode"
+              htmlFor="theme-mode"
             >
               Dark
             </label>

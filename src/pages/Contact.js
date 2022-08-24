@@ -1,5 +1,9 @@
 import React from "react";
-import Navbar from "../components/Navbar/Navbar";
+import EmailPhone from "../components/Contact/EmailPhone";
+import FooterContact from "../components/Footer/FooterContact";
+import HeroContact from "../components/Hero/HeroContact";
+import NavbarContact from "../components/Navbar/NavbarContact";
+import SocialNetworkCarousel from "../components/SocialNetwork/SocialNetworkCarousel";
 
 const Contact = () => {
   return (
@@ -7,8 +11,12 @@ const Contact = () => {
       <div>
         {/* <PageLoadingSpinner /> */}
         <main className="page-wrapper">
-          <Navbar />
+          <NavbarContact />
+          <HeroContact />
+          <EmailPhone />
+          <SocialNetworkCarousel />
         </main>
+        <FooterContact />
       </div>
     </div>
   );

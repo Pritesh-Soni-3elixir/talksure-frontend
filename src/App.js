@@ -27,6 +27,9 @@ function App() {
         <Route path="/home">
           <Home />
         </Route>
+        <Route path="/error404">
+          <Error404 />
+        </Route>
         <Route path="/">
           <Error404 />
         </Route>

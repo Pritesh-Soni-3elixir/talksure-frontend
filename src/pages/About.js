@@ -4,7 +4,7 @@ import ContactCta from "../components/Contact/ContactCta";
 import BenefitsAbout from "../components/Features/BenefitsAbout";
 import FooterAbout from "../components/Footer/FooterAbout";
 import HeroAbout from "../components/Hero/HeroAbout";
-import NavbarAbout from "../components/Navbar/NavbarAbout";
+import Navbar from "../components/Navbar/Navbar";
 import PageLoadingSpinner from "../components/PageLoadingSpinner/PageLoadingSpinner";
 import Team from "../components/Team/Team";
 import TestimonialClientsSwiper from "../components/Testimonials/TestimonialClientsSwiper";
@@ -15,7 +15,7 @@ const About = () => {
     <div>
       {/* <PageLoadingSpinner /> */}
       <main className="page-wrapper">
-        <NavbarAbout />
+        <Navbar />
         <HeroAbout />
         <BenefitsAbout />
         <VideoShowreel />

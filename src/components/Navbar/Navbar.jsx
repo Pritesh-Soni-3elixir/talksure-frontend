@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const NavbarAbout = () => {
   return (
     <div>
-      <header className="header navbar navbar-expand-lg bg-light shadow-sm fixed-top">
+      <header className="header navbar navbar-expand-lg position-absolute navbar-sticky bg-light">
         <div className="container px-3">
-          <Link to="/home">
+          <Link to="/home" className="navbar-brand pe-3">
             <img src="assets/img/logo.svg" width="47" alt="Silicon" />
+            Silicon
           </Link>
-          Silicon
           <div id="navbarNav" className="offcanvas offcanvas-end">
             <div className="offcanvas-header border-bottom">
               <h5 className="offcanvas-title">Menu</h5>
@@ -25,9 +25,8 @@ const Navbar = () => {
                 <li className="nav-item dropdown">
                   <a
                     href="#"
-                    className="nav-link dropdown-toggle active"
+                    className="nav-link dropdown-toggle"
                     data-bs-toggle="dropdown"
-                    aria-current="page"
                   >
                     Landings
                   </a>
@@ -36,113 +35,24 @@ const Navbar = () => {
                       <div
                         className="mega-dropdown-column bg-position-center bg-repeat-0 bg-size-cover rounded-3 rounded-end-0"
                         style={{
-                          backgroundImage: "url(assets / img / landings.jpg)",
+                          backgroundImage: "url(assets/img/landings.jpg)",
                           margin: "-1px",
                         }}
                       ></div>
                       <div className="mega-dropdown-column pt-lg-3 pb-lg-4">
                         <ul className="list-unstyled mb-0">
                           <li>
-                            <Link to="/" className="dropdown-item">
-                              Template Intro Page
-                            </Link>
-                            {/* <a href="index-2.html" className="dropdown-item">
-                              Template Intro Page
-                            </a> */}
-                          </li>
-                          <li>
-                            <Link to="/mobile-v1" className="dropdown-item">
+                            <Link to="/home" className="dropdown-item">
                               Mobile App Showcase v.1
                             </Link>
                           </li>
                           <li>
-                            <Link to="/mobile-v2" className="dropdown-item">
-                              Mobile App Showcase v.2
-                            </Link>
-                          </li>
-                          <li>
-                            <a
-                              href="landing-saas-v1.html"
-                              className="dropdown-item"
-                            >
-                              SaaS v.1
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="landing-saas-v2.html"
-                              className="dropdown-item"
-                            >
-                              SaaS v.2
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="landing-saas-v3.html"
-                              className="dropdown-item"
-                            >
-                              SaaS v.3
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="landing-financial.html"
-                              className="dropdown-item"
-                            >
-                              Financial Consulting
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="landing-online-courses.html"
+                            <Link
+                              to="/landing-online-courses"
                               className="dropdown-item"
                             >
                               Online Courses
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                      <div className="mega-dropdown-column pt-lg-3 pb-lg-4">
-                        <ul className="list-unstyled mb-0">
-                          <li>
-                            <a
-                              href="landing-medical.html"
-                              className="dropdown-item"
-                            >
-                              Medical
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="landing-software-company.html"
-                              className="dropdown-item"
-                            >
-                              IT (Software) Company
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="landing-conference.html"
-                              className="dropdown-item"
-                            >
-                              Conference
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="landing-digital-agency.html"
-                              className="dropdown-item"
-                            >
-                              Digital Agency
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="landing-blog.html"
-                              className="dropdown-item"
-                            >
-                              Blog Homepage
-                            </a>
+                            </Link>
                           </li>
                         </ul>
                       </div>
@@ -152,7 +62,7 @@ const Navbar = () => {
                 <li className="nav-item dropdown">
                   <a
                     href="#"
-                    className="nav-link dropdown-toggle"
+                    className="nav-link dropdown-toggle active"
                     data-bs-toggle="dropdown"
                   >
                     Pages
@@ -167,213 +77,36 @@ const Navbar = () => {
                               About v.1
                             </Link>
                           </li>
-                          <li>
-                            <a
-                              href="about-v2.html"
-                              className="dropdown-item py-1"
-                            >
-                              About v.2
-                            </a>
-                          </li>
-                        </ul>
-                        <h6 className="px-3 mb-2">Blog</h6>
-                        <ul className="list-unstyled mb-3">
-                          <li>
-                            <a
-                              href="blog-list-with-sidebar.html"
-                              className="dropdown-item py-1"
-                            >
-                              List View with Sidebar
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="blog-grid-with-sidebar.html"
-                              className="dropdown-item py-1"
-                            >
-                              Grid View with Sidebar
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="blog-list-no-sidebar.html"
-                              className="dropdown-item py-1"
-                            >
-                              List View no Sidebar
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="blog-grid-no-sidebar.html"
-                              className="dropdown-item py-1"
-                            >
-                              Grid View no Sidebar
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="blog-simple-feed.html"
-                              className="dropdown-item py-1"
-                            >
-                              Simple Feed
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="blog-single.html"
-                              className="dropdown-item py-1"
-                            >
-                              Single Post
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="blog-podcast.html"
-                              className="dropdown-item py-1"
-                            >
-                              Podcast
-                            </a>
-                          </li>
                         </ul>
                       </div>
                       <div className="mega-dropdown-column">
                         <h6 className="px-3 mb-2">Portfolio</h6>
                         <ul className="list-unstyled mb-3">
                           <li>
-                            <a
-                              href="portfolio-grid.html"
-                              className="dropdown-item py-1"
-                            >
-                              Grid View
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="portfolio-list.html"
-                              className="dropdown-item py-1"
-                            >
-                              List View
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="portfolio-slider.html"
-                              className="dropdown-item py-1"
-                            >
-                              Slider View
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="portfolio-courses.html"
+                            <Link
+                              to="/portfolio-courses"
                               className="dropdown-item py-1"
                             >
                               Courses
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="portfolio-single-project.html"
-                              className="dropdown-item py-1"
-                            >
-                              Single Project
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="portfolio-single-course.html"
-                              className="dropdown-item py-1"
-                            >
-                              Single Course
-                            </a>
-                          </li>
-                        </ul>
-                        <h6 className="px-3 mb-2">Services</h6>
-                        <ul className="list-unstyled mb-3">
-                          <li>
-                            <a
-                              href="services-v1.html"
-                              className="dropdown-item py-1"
-                            >
-                              Services v.1
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="services-v2.html"
-                              className="dropdown-item py-1"
-                            >
-                              Services v.2
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="services-single-v1.html"
-                              className="dropdown-item py-1"
-                            >
-                              Service Details v.1
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="services-single-v2.html"
-                              className="dropdown-item py-1"
-                            >
-                              Service Details v.2
-                            </a>
+                            </Link>
                           </li>
                         </ul>
                       </div>
                       <div className="mega-dropdown-column">
-                        <h6 className="px-3 mb-2">Pricing</h6>
-                        <ul className="list-unstyled mb-3">
-                          <li>
-                            <a
-                              href="pricing.html"
-                              className="dropdown-item py-1"
-                            >
-                              Pricing Page
-                            </a>
-                          </li>
-                        </ul>
                         <h6 className="px-3 mb-2">Contacts</h6>
                         <ul className="list-unstyled mb-3">
                           <li>
-                            <Link to="/contact" className="dropdown-item py-1">
+                            <Link className="dropdown-item py-1" to="/contact">
                               Contacts v.1
                             </Link>
-                          </li>
-                          <li>
-                            <a
-                              href="contacts-v2.html"
-                              className="dropdown-item py-1"
-                            >
-                              Contacts v.2
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="contacts-v3.html"
-                              className="dropdown-item py-1"
-                            >
-                              Contacts v.3
-                            </a>
                           </li>
                         </ul>
                         <h6 className="px-3 mb-2">Specialty</h6>
                         <ul className="list-unstyled">
                           <li>
-                            <Link to="/error404" className="dropdown-item py-1">
+                            <Link className="dropdown-item py-1" to="/error404">
                               404 Error v.1
                             </Link>
-                          </li>
-                          <li>
-                            <a
-                              href="404-v2.html"
-                              className="dropdown-item py-1"
-                            >
-                              404 Error v.2
-                            </a>
                           </li>
                         </ul>
                       </div>
@@ -390,70 +123,16 @@ const Navbar = () => {
                   </a>
                   <ul className="dropdown-menu">
                     <li>
-                      <a href="account-details.html" className="dropdown-item">
-                        Account Details
-                      </a>
-                    </li>
-                    <li>
-                      <a href="account-security.html" className="dropdown-item">
-                        Security
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="account-notifications.html"
-                        className="dropdown-item"
-                      >
-                        Notifications
-                      </a>
-                    </li>
-                    <li>
-                      <a href="account-messages.html" className="dropdown-item">
-                        Messages
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="account-saved-items.html"
-                        className="dropdown-item"
-                      >
-                        Saved Items
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="account-collections.html"
-                        className="dropdown-item"
-                      >
-                        My Collections
-                      </a>
-                    </li>
-                    <li>
-                      <a href="account-payment.html" className="dropdown-item">
-                        Payment Details
-                      </a>
-                    </li>
-                    <li>
-                      <a href="account-signin.html" className="dropdown-item">
+                      <Link to="/signin" className="dropdown-item">
                         Sign In
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="account-signup.html" className="dropdown-item">
+                      <Link to="/signup" className="dropdown-item">
                         Sign Up
-                      </a>
+                      </Link>
                     </li>
                   </ul>
-                </li>
-                <li className="nav-item">
-                  <a href="components/typography.html" className="nav-link">
-                    UI Kit
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a href="docs/getting-started.html" className="nav-link">
-                    Docs
-                  </a>
                 </li>
               </ul>
             </div>
@@ -517,4 +196,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavbarAbout;

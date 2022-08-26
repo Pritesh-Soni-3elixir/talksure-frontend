@@ -1,11 +1,15 @@
 import React from "react";
+import LandingOnlineCoursesContent from "../components/LandingOnlineCoursesContent/LandingOnlineCoursesContent";
 import Navbar from "../components/Navbar/Navbar";
+import Footer from "../components/Footer/Footer";
 
 const LandingOnlineCourses = () => {
   return (
     <div>
       <main className="page-wrapper">
         <Navbar />
+        <LandingOnlineCoursesContent />
+        <Footer />
       </main>
     </div>
   );

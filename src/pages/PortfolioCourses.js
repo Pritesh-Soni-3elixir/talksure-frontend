@@ -1,4 +1,7 @@
 import React from "react";
+import SignUpCTS from "../components/Contact/SignUpCTS";
+import CoursesList from "../components/CoursesList/CoursesList";
+import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
 
 const PortfolioCourses = () => {
@@ -20,6 +23,9 @@ const PortfolioCourses = () => {
               </li>
             </ol>
           </nav>
+          <CoursesList />
+          <SignUpCTS />
+          <Footer />
         </section>
       </main>
     </div>

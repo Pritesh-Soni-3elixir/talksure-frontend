@@ -1,6 +1,6 @@
 import React from "react";
 
-const TermsAndConditionContent = () => {
+const PrivacyPolicyContent = () => {
   return (
     <section className="position-relative pt-5 mt-3 mx-3 mx-lg-5">
       <div className="title-section">
@@ -206,4 +206,4 @@ const TermsAndConditionContent = () => {
   );
 };
 
-export default TermsAndConditionContent;
+export default PrivacyPolicyContent;

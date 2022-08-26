@@ -8,12 +8,20 @@ import MobileAppShowcaseV1 from "./pages/MobileAppShowcaseV1";
 import Error404 from "./pages/Error404";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndCondition from "./pages/TermsAndCondition";
+import LandingOnlineCourses from "./pages/LandingOnlineCourses";
+import PortfolioCourses from "./pages/PortfolioCourses";
 
 function App() {
   return (
     <div>
       {/* the first match will be rendered, so more specific path should be on top */}
       <Switch>
+        <Route path="/landing-online-courses">
+          <LandingOnlineCourses />
+        </Route>
+        <Route path="/portfolio-courses">
+          <PortfolioCourses />
+        </Route>
         <Route path="/privacy-policy">
           <PrivacyPolicy />
         </Route>

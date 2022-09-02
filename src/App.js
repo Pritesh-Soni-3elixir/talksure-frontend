@@ -10,12 +10,16 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndCondition from "./pages/TermsAndCondition";
 import LandingOnlineCourses from "./pages/LandingOnlineCourses";
 import PortfolioCourses from "./pages/PortfolioCourses";
+import HostForm from "./pages/HostForm";
 
 function App() {
   return (
     <div>
       {/* the first match will be rendered, so more specific path should be on top */}
       <Switch>
+        <Route path="/host-form">
+          <HostForm />
+        </Route>
         <Route path="/landing-online-courses">
           <LandingOnlineCourses />
         </Route>

@@ -1,0 +1,24 @@
+.tag{
+    color: #4044ee;
+    padding: 0.3rem 0.5rem;
+    border: 1px solid #4044ee;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    margin:0.5rem;
+    transition: 0.2s ease-in-out;
+    display: inline-block;
+    -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.tag:hover{
+    cursor: pointer;
+    background-color: #4044ee;
+    color: #fff;
+}
+
+.active{
+    background-color: #4044ee;
+    color: #fff;
+}

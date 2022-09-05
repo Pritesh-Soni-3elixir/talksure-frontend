@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import DatePicker from "react-datepicker";
 import "./HostFormBody.scss";
 
@@ -7,6 +7,11 @@ import "react-datepicker/dist/react-datepicker.css";
 
 const HostFormBody = () => {
   const [interests, setInterests] = useState(null);
+  const titleRef = useRef();
+  const descriptionRef = useRef();
+  const expiredateRef = useRef();
+  const linkRef = useRef();
+  const [warningText, setWarningText] = useState(false);
   const [hostDetails, setHostDetails] = useState({
     title: "",
     description: "",
@@ -26,6 +31,64 @@ const HostFormBody = () => {
     });
   }, []);
 
+  const isValidUrl = (urlString) => {
+    var urlPattern = new RegExp(
+      "^(https?:\\/\\/)?" + // validate protocol
+        "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|" + // validate domain name
+        "((\\d{1,3}\\.){3}\\d{1,3}))" + // validate OR ip (v4) address
+        "(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*" + // validate port and path
+        "(\\?[;&a-z\\d%_.~+=-]*)?" + // validate query string
+        "(\\#[-a-z\\d_]*)?$",
+      "i"
+    ); // validate fragment locator
+    return !!urlPattern.test(urlString);
+  };
+
+  const fieldValidation = () => {
+    const { title, description, expireDate, link } = hostDetails;
+    const ifValidUrl = isValidUrl(link);
+    let invalidCount = 0;
+
+    // title check
+    if (title === "") {
+      titleRef.current.classList.add("invalid-field");
+      invalidCount += 1;
+    } else {
+      titleRef.current.classList.remove("invalid-field");
+    }
+
+    // description check
+    if (description === "") {
+      descriptionRef.current.classList.add("invalid-field");
+      invalidCount += 1;
+    } else {
+      descriptionRef.current.classList.remove("invalid-field");
+    }
+
+    // expiredate check
+    if (expireDate === null) {
+      expiredateRef.current.input.classList.add("invalid-field");
+      invalidCount += 1;
+    } else {
+      expiredateRef.current.input.classList.remove("invalid-field");
+    }
+
+    // link check
+    if (link === "" || !ifValidUrl) {
+      linkRef.current.classList.add("invalid-field");
+      invalidCount += 1;
+    } else {
+      linkRef.current.classList.remove("invalid-field");
+    }
+
+    // if any field is invalid
+    if (invalidCount > 0) {
+      return false;
+    } else {
+      return true;
+    }
+  };
+
   const handleOnChange = (e) => {
     const { name, value } = e.target;
     setHostDetails((prevHost) => {
@@ -34,19 +97,27 @@ const HostFormBody = () => {
   };
 
   const handleSchedule = (e) => {
+    // preventDefault behavior(redirect to another page)
     e.preventDefault();
-    console.log(hostDetails);
-    axios
-      .post("http://localhost:4000/api/v1/save-host", hostDetails)
-      .then((res) => {
-        console.log(res);
-      });
+    console.log("Filled hostDetails", hostDetails);
+    const isValidated = fieldValidation();
+    if (isValidated) {
+      alert("Valid request");
+      // axios
+      //   .post("http://localhost:4000/api/v1/save-host", hostDetails)
+      //   .then((res) => {
+      //     console.log(res);
+      //   });
+    } else {
+      alert("Fill all the mandatory fields");
+    }
   };
 
   const handleTagClick = (e) => {
     console.log("classlist", e.currentTarget.classList);
+
     if (e.currentTarget.classList.contains("active")) {
-      // if the tag is already selected/active, we remove the class "active" and remove it from the state
+      // if the tag is already selected/active, we remove the class "active" and remove the tag from the state
       e.currentTarget.classList.remove("active");
       setHostDetails((prevHost) => {
         const newTags = prevHost.tags.filter(
@@ -56,11 +127,16 @@ const HostFormBody = () => {
         return { ...prevHost, tags: newTags };
       });
     } else {
-      e.currentTarget.classList.add("active");
-      setHostDetails((prevHost) => {
-        console.log("add tag", prevHost.tags, e.target.innerHTML);
-        return { ...prevHost, tags: [...prevHost.tags, e.target.innerHTML] };
-      });
+      if (hostDetails.tags.length > 2) {
+        setWarningText(true);
+        // alert("you can select only 3 tags");
+      } else {
+        e.currentTarget.classList.add("active");
+        setHostDetails((prevHost) => {
+          console.log("add tag", prevHost.tags, e.target.innerHTML);
+          return { ...prevHost, tags: [...prevHost.tags, e.target.innerHTML] };
+        });
+      }
     }
   };
 
@@ -79,16 +155,26 @@ const HostFormBody = () => {
               {/* Title */}
               <div className="col-12">
                 <label htmlFor="title" className="form-label fs-base">
-                  Title
+                  Title*
                 </label>
                 <input
                   name="title"
                   type="text"
                   className="form-control form-control-lg"
+                  // className={
+                  //   "form-control form-control-lg " +
+                  //   (fieldValid.titleInvalid && "invalid-field")
+                  // }
+                  // className={
+                  //   "form-control form-control-lg " +
+                  //   (fieldValid.titleInvalid && "invalid-field")
+                  // }
                   id="title"
                   required
                   onChange={handleOnChange}
                   value={hostDetails.title}
+                  maxLength={250}
+                  ref={titleRef}
                 />
                 <div className="invalid-feedback">
                   Please enter a valid title!
@@ -98,7 +184,7 @@ const HostFormBody = () => {
               {/* Description */}
               <div className="col-12">
                 <label htmlFor="description" className="form-label fs-base">
-                  Description
+                  Description*
                 </label>
                 <input
                   type="email"
@@ -108,19 +194,22 @@ const HostFormBody = () => {
                   required
                   onChange={handleOnChange}
                   value={hostDetails.description}
+                  maxLength={250}
+                  ref={descriptionRef}
                 />
               </div>
 
               {/* Expiration Date */}
               <div className="col-sm-6" data-provide="datepicker">
                 <label htmlFor="exp-date" className="form-label fs-base">
-                  Expiration Date
+                  Expiration Date*
                 </label>
                 <DatePicker
                   className="form-control form-control-lg"
                   dateFormat="dd/MM/yyyy"
                   selected={hostDetails.expireDate}
                   name="expireDate"
+                  ref={expiredateRef}
                   onChange={(date) =>
                     setHostDetails((prevHost) => {
                       return { ...prevHost, expireDate: date };
@@ -136,7 +225,7 @@ const HostFormBody = () => {
               {/* Host */}
               <div className="col-12">
                 <label htmlFor="host" className="form-label fs-base">
-                  Host
+                  Host*
                 </label>
                 <select
                   className="form-select form-select-lg"
@@ -167,6 +256,9 @@ const HostFormBody = () => {
                   Languages
                 </label>
                 <br />
+                {warningText && (
+                  <p className="warning-text">You can select upto 3 tags</p>
+                )}
                 {interests &&
                   interests.languages.map((language) => (
                     <span
@@ -189,6 +281,9 @@ const HostFormBody = () => {
                   Regions
                 </label>
                 <br />
+                {warningText && (
+                  <p className="warning-text">You can select upto 3 tags</p>
+                )}
                 {interests &&
                   interests.regions.map((region) => (
                     <span
@@ -211,6 +306,9 @@ const HostFormBody = () => {
                   Topic
                 </label>
                 <br />
+                {warningText && (
+                  <p className="warning-text">You can select upto 3 tags</p>
+                )}
                 {interests &&
                   interests.topics.map((topic) => (
                     <span
@@ -230,7 +328,7 @@ const HostFormBody = () => {
               {/* Link Type */}
               <div className="col-12">
                 <label htmlFor="link-type" className="form-label fs-base">
-                  Link Type
+                  Link Type*
                 </label>
                 <select
                   className="form-select form-select-lg"
@@ -261,7 +359,7 @@ const HostFormBody = () => {
               {/* Link */}
               <div className="col-12">
                 <label htmlFor="link" className="form-label fs-base">
-                  Link
+                  Link*
                 </label>
                 <input
                   type="url"
@@ -271,6 +369,8 @@ const HostFormBody = () => {
                   onChange={handleOnChange}
                   name="link"
                   value={hostDetails.link}
+                  maxLength={250}
+                  ref={linkRef}
                 />
                 {/* <div className="invalid-feedback">
                   Please enter a valid title!
@@ -293,6 +393,7 @@ const HostFormBody = () => {
                   onChange={handleOnChange}
                   name="sponserLink"
                   value={hostDetails.sponserLink}
+                  maxLength={250}
                 />
                 {/* <div className="invalid-feedback">
                   Please enter a valid title!
@@ -312,6 +413,7 @@ const HostFormBody = () => {
                   onChange={handleOnChange}
                   name="sponserImg"
                   value={hostDetails.sponserImg}
+                  maxLength={250}
                 />
                 {/* <div className="invalid-feedback">
                   Please enter a valid title!

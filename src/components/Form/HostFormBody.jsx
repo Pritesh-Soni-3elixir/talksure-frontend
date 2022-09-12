@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
 import DatePicker from "react-datepicker";
@@ -26,13 +28,13 @@ const HostFormBody = () => {
   useEffect(() => {
     axios.get("http://localhost:4000/api/v1/get-interest").then((res) => {
       const impData = res.data.data[0];
-      console.log(impData);
+      // console.log(impData);
       setInterests(impData);
     });
   }, []);
 
   const isValidUrl = (urlString) => {
-    var urlPattern = new RegExp(
+    const urlPattern = new RegExp(
       "^(https?:\\/\\/)?" + // validate protocol
         "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|" + // validate domain name
         "((\\d{1,3}\\.){3}\\d{1,3}))" + // validate OR ip (v4) address
@@ -84,59 +86,52 @@ const HostFormBody = () => {
     // if any field is invalid
     if (invalidCount > 0) {
       return false;
-    } else {
-      return true;
     }
+    return true;
   };
 
   const handleOnChange = (e) => {
     const { name, value } = e.target;
-    setHostDetails((prevHost) => {
-      return { ...prevHost, [name]: value };
-    });
+    setHostDetails((prevHost) => ({ ...prevHost, [name]: value }));
   };
 
   const handleSchedule = (e) => {
     // preventDefault behavior(redirect to another page)
     e.preventDefault();
-    console.log("Filled hostDetails", hostDetails);
+    // console.log("Filled hostDetails", hostDetails);
     const isValidated = fieldValidation();
     if (isValidated) {
-      alert("Valid request");
+      // alert("Valid request");
       // axios
       //   .post("http://localhost:4000/api/v1/save-host", hostDetails)
       //   .then((res) => {
       //     console.log(res);
       //   });
     } else {
-      alert("Fill all the mandatory fields");
+      // alert("Fill all the mandatory fields");
     }
   };
 
   const handleTagClick = (e) => {
-    console.log("classlist", e.currentTarget.classList);
+    // console.log("classlist", e.currentTarget.classList);
 
     if (e.currentTarget.classList.contains("active")) {
       // if the tag is already selected/active, we remove the class "active" and remove the tag from the state
       e.currentTarget.classList.remove("active");
       setHostDetails((prevHost) => {
-        const newTags = prevHost.tags.filter(
-          (tag) => tag !== e.target.innerHTML
-        );
-        console.log("after removing : tags : ", newTags);
+        const newTags = prevHost.tags.filter((tag) => tag !== e.target.innerHTML);
+        // console.log("after removing : tags : ", newTags);
         return { ...prevHost, tags: newTags };
       });
+    } else if (hostDetails.tags.length > 2) {
+      setWarningText(true);
+      // alert("you can select only 3 tags");
     } else {
-      if (hostDetails.tags.length > 2) {
-        setWarningText(true);
-        // alert("you can select only 3 tags");
-      } else {
-        e.currentTarget.classList.add("active");
-        setHostDetails((prevHost) => {
-          console.log("add tag", prevHost.tags, e.target.innerHTML);
-          return { ...prevHost, tags: [...prevHost.tags, e.target.innerHTML] };
-        });
-      }
+      e.currentTarget.classList.add("active");
+      setHostDetails((prevHost) =>
+        // console.log("add tag", prevHost.tags, e.target.innerHTML);
+        ({ ...prevHost, tags: [...prevHost.tags, e.target.innerHTML] })
+      );
     }
   };
 
@@ -176,9 +171,7 @@ const HostFormBody = () => {
                   maxLength={250}
                   ref={titleRef}
                 />
-                <div className="invalid-feedback">
-                  Please enter a valid title!
-                </div>
+                <div className="invalid-feedback">Please enter a valid title!</div>
               </div>
 
               {/* Description */}
@@ -211,15 +204,11 @@ const HostFormBody = () => {
                   name="expireDate"
                   ref={expiredateRef}
                   onChange={(date) =>
-                    setHostDetails((prevHost) => {
-                      return { ...prevHost, expireDate: date };
-                    })
+                    setHostDetails((prevHost) => ({ ...prevHost, expireDate: date }))
                   }
                 />
 
-                <div className="invalid-feedback">
-                  Please provid a valid date!
-                </div>
+                <div className="invalid-feedback">Please provid a valid date!</div>
               </div>
 
               {/* Host */}
@@ -233,16 +222,14 @@ const HostFormBody = () => {
                   required
                   defaultValue="Steev"
                 >
-                  <option value disabled key={"choose host"}>
+                  <option value disabled key="choose host">
                     Choose a Host
                   </option>
-                  <option key={"steev"} value="Therapist">
+                  <option key="steev" value="Therapist">
                     Steev
                   </option>
                 </select>
-                <div className="invalid-feedback">
-                  Choose a specialist from the list!
-                </div>
+                <div className="invalid-feedback">Choose a specialist from the list!</div>
               </div>
 
               {/* interests */}
@@ -256,9 +243,7 @@ const HostFormBody = () => {
                   Languages
                 </label>
                 <br />
-                {warningText && (
-                  <p className="warning-text">You can select upto 3 tags</p>
-                )}
+                {warningText && <p className="warning-text">You can select upto 3 tags</p>}
                 {interests &&
                   interests.languages.map((language) => (
                     <span
@@ -270,9 +255,7 @@ const HostFormBody = () => {
                       {language.name}
                     </span>
                   ))}
-                <div className="invalid-feedback">
-                  Choose a langauge from the list!
-                </div>
+                <div className="invalid-feedback">Choose a langauge from the list!</div>
               </div>
 
               {/* Regions */}
@@ -281,9 +264,7 @@ const HostFormBody = () => {
                   Regions
                 </label>
                 <br />
-                {warningText && (
-                  <p className="warning-text">You can select upto 3 tags</p>
-                )}
+                {warningText && <p className="warning-text">You can select upto 3 tags</p>}
                 {interests &&
                   interests.regions.map((region) => (
                     <span
@@ -295,9 +276,7 @@ const HostFormBody = () => {
                       {region.name}
                     </span>
                   ))}
-                <div className="invalid-feedback">
-                  Choose a region from the list!
-                </div>
+                <div className="invalid-feedback">Choose a region from the list!</div>
               </div>
 
               {/* Topic */}
@@ -306,9 +285,7 @@ const HostFormBody = () => {
                   Topic
                 </label>
                 <br />
-                {warningText && (
-                  <p className="warning-text">You can select upto 3 tags</p>
-                )}
+                {warningText && <p className="warning-text">You can select upto 3 tags</p>}
                 {interests &&
                   interests.topics.map((topic) => (
                     <span
@@ -320,9 +297,7 @@ const HostFormBody = () => {
                       {topic.name}
                     </span>
                   ))}
-                <div className="invalid-feedback">
-                  Choose a topic from the list!
-                </div>
+                <div className="invalid-feedback">Choose a topic from the list!</div>
               </div>
 
               {/* Link Type */}
@@ -338,22 +313,20 @@ const HostFormBody = () => {
                   value={hostDetails.linkType}
                   name="linkType"
                 >
-                  <option value disabled key={"choose link"}>
+                  <option value disabled key="choose link">
                     Choose a Link type
                   </option>
-                  <option key={"MP3"} value="MP3">
+                  <option key="MP3" value="MP3">
                     MP3
                   </option>
-                  <option key={"MP4"} value="MP4">
+                  <option key="MP4" value="MP4">
                     MP4
                   </option>
-                  <option key={"Youtube"} value="Youtube">
+                  <option key="Youtube" value="Youtube">
                     Youtube
                   </option>
                 </select>
-                <div className="invalid-feedback">
-                  Choose a specialist from the list!
-                </div>
+                <div className="invalid-feedback">Choose a specialist from the list!</div>
               </div>
 
               {/* Link */}
@@ -379,10 +352,7 @@ const HostFormBody = () => {
 
               {/* Brought By (Website) */}
               <div className="col-12">
-                <label
-                  htmlFor="brought-by-website"
-                  className="form-label fs-base"
-                >
+                <label htmlFor="brought-by-website" className="form-label fs-base">
                   Brought By (Website)
                 </label>
                 <input

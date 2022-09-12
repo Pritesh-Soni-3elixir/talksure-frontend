@@ -1,7 +1,6 @@
 import React from "react";
 
-const Landings = () => {
-  return (
+const Landings = () => (
     <div>
       <section
         id="landings"
@@ -180,6 +179,5 @@ const Landings = () => {
       </section>
     </div>
   );
-};
 
 export default Landings;

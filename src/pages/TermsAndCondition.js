@@ -2,8 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar/Navbar";
 import TermsAndConditionContent from "../components/TermsAndConditionContent/TermsAndConditionContent";
 
-const TermsAndCondition = () => {
-  return (
+const TermsAndCondition = () => (
     <div>
       <main className="page-wrapper">
         <Navbar />
@@ -11,6 +10,5 @@ const TermsAndCondition = () => {
       </main>
     </div>
   );
-};
 
 export default TermsAndCondition;

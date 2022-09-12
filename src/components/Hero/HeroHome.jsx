@@ -1,7 +1,6 @@
 import React from "react";
 
-const HeroHome = () => {
-  return (
+const HeroHome = () => (
     <div>
       <section
         className="dark-mode vh-100 bg-repeat-0 bg-position-center bg-size-cover overflow-hidden"
@@ -23,7 +22,7 @@ const HeroHome = () => {
               />
               <div className="position-relative d-flex align-items-center justify-content-center justify-content-md-start mb-md-4 mb-lg-5 mt-auto">
                 <div className="btn btn-icon btn-secondary rounded-circle">
-                  <i className="bx bx-chevron-down"></i>
+                  <i className="bx bx-chevron-down" />
                 </div>
                 <a
                   href="#landings"
@@ -69,6 +68,5 @@ const HeroHome = () => {
       </section>
     </div>
   );
-};
 
 export default HeroHome;

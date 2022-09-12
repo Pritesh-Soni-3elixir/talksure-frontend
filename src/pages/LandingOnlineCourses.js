@@ -3,8 +3,7 @@ import LandingOnlineCoursesContent from "../components/LandingOnlineCoursesConte
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 
-const LandingOnlineCourses = () => {
-  return (
+const LandingOnlineCourses = () => (
     <div>
       <main className="page-wrapper">
         <Navbar />
@@ -13,6 +12,5 @@ const LandingOnlineCourses = () => {
       </main>
     </div>
   );
-};
 
 export default LandingOnlineCourses;

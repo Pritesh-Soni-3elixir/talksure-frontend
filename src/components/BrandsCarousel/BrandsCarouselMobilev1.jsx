@@ -1,7 +1,6 @@
 import React from "react";
 
-const BrandsCarouselMobilev1 = () => {
-  return (
+const BrandsCarouselMobilev1 = () => (
     <div>
       <section className="container py-5 mt-md-2 mt-lg-4">
         <div
@@ -107,11 +106,10 @@ const BrandsCarouselMobilev1 = () => {
           </div>
 
           {/* Pagination (bullets) */}
-          <div className="swiper-pagination position-relative pt-2 mt-4"></div>
+          <div className="swiper-pagination position-relative pt-2 mt-4" />
         </div>
       </section>
     </div>
   );
-};
 
 export default BrandsCarouselMobilev1;

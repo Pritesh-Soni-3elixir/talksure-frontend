@@ -2,8 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar/Navbar";
 import PrivacyPolicyContent from "../components/PrivacyPolicy/PrivacyPolicyContent";
 
-const PrivacyPolicy = () => {
-  return (
+const PrivacyPolicy = () => (
     <div>
       <main className="page-wrapper">
         <Navbar />
@@ -11,6 +10,5 @@ const PrivacyPolicy = () => {
       </main>
     </div>
   );
-};
 
 export default PrivacyPolicy;

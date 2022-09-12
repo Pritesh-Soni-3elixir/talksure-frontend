@@ -1,7 +1,6 @@
 import React from "react";
 
-const FooterMobilev1 = () => {
-  return (
+const FooterMobilev1 = () => (
     <div>
       <footer className="footer pt-5 pb-4 pb-lg-5">
         <div className="container text-center pt-lg-3">
@@ -81,19 +80,19 @@ const FooterMobilev1 = () => {
               href="#"
               className="btn btn-icon btn-secondary btn-facebook mx-2"
             >
-              <i className="bx bxl-facebook"></i>
+              <i className="bx bxl-facebook" />
             </a>
             <a
               href="#"
               className="btn btn-icon btn-secondary btn-instagram mx-2"
             >
-              <i className="bx bxl-instagram"></i>
+              <i className="bx bxl-instagram" />
             </a>
             <a href="#" className="btn btn-icon btn-secondary btn-twitter mx-2">
-              <i className="bx bxl-twitter"></i>
+              <i className="bx bxl-twitter" />
             </a>
             <a href="#" className="btn btn-icon btn-secondary btn-youtube mx-2">
-              <i className="bx bxl-youtube"></i>
+              <i className="bx bxl-youtube" />
             </a>
           </div>
           <p className="nav d-block fs-sm text-center pt-5 mt-lg-4 mb-0">
@@ -104,7 +103,7 @@ const FooterMobilev1 = () => {
               className="nav-link d-inline-block p-0"
               href="https://createx.studio/"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               Createx Studio
             </a>
@@ -113,6 +112,5 @@ const FooterMobilev1 = () => {
       </footer>
     </div>
   );
-};
 
 export default FooterMobilev1;

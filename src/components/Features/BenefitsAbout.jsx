@@ -1,7 +1,6 @@
 import React from "react";
 
-const BenefitsAbout = () => {
-  return (
+const BenefitsAbout = () => (
     <div>
       <section className="container mt-3 mb-5 pt-lg-5" id="benefits">
         <div
@@ -74,11 +73,10 @@ const BenefitsAbout = () => {
           </div>
 
           {/* Pagination (bullets)  */}
-          <div className="swiper-pagination position-relative pt-2 pt-sm-3 mt-4"></div>
+          <div className="swiper-pagination position-relative pt-2 pt-sm-3 mt-4" />
         </div>
       </section>
     </div>
   );
-};
 
 export default BenefitsAbout;

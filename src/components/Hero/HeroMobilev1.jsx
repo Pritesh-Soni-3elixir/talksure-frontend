@@ -1,7 +1,6 @@
 import React from "react";
 
-const HeroMobilev1 = () => {
-  return (
+const HeroMobilev1 = () => (
     <div>
       <section
         className="overflow-hidden pt-5"
@@ -61,7 +60,7 @@ const HeroMobilev1 = () => {
                   data-scroll
                   data-scroll-offset="120"
                 >
-                  <i className="bx bx-chevron-down"></i>
+                  <i className="bx bx-chevron-down" />
                 </a>
                 <span className="fs-sm">Discover more</span>
               </div>
@@ -71,7 +70,7 @@ const HeroMobilev1 = () => {
                 className="position-relative overflow-hidden mt-4 pb-3 pt-4 mx-auto me-md-0"
                 style={{ maxWidth: "632px" }}
               >
-                <div className="ratio ratio-1x1"></div>
+                <div className="ratio ratio-1x1" />
                 <img
                   src="assets/img/landing/app-showcase/hero-phone-1.png"
                   className="rellax position-absolute top-0 start-0 zindex-2"
@@ -93,6 +92,5 @@ const HeroMobilev1 = () => {
       </section>
     </div>
   );
-};
 
 export default HeroMobilev1;

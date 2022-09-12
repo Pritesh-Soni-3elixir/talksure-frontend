@@ -2,8 +2,8 @@ import React from "react";
 import Navbar from "../components/Navbar/Navbar";
 import Error404Content from "../components/Error/Error404Content";
 import RightsReserved from "../components/Footer/RightsReserved";
-const Error404 = () => {
-  return (
+
+const Error404 = () => (
     <div>
       <div>
         {/* <PageLoadingSpinner /> */}
@@ -15,6 +15,5 @@ const Error404 = () => {
       </div>
     </div>
   );
-};
 
 export default Error404;

@@ -1,7 +1,6 @@
 import React from "react";
 
-const HowItWorks = () => {
-  return (
+const HowItWorks = () => (
     <div>
       <section className="container">
         <div
@@ -44,7 +43,7 @@ const HowItWorks = () => {
               <div
                 className="bg-gradient-primary position-absolute start-0 bottom-0 w-100 opacity-15 rounded-3"
                 style={{ height: "86.5%" }}
-              ></div>
+               />
             </div>
           </div>
           <div className="col-md-6 col-lg-5 offset-lg-1">
@@ -106,14 +105,14 @@ const HowItWorks = () => {
                   id="prev-screen"
                   className="btn btn-prev btn-icon btn-sm me-2"
                 >
-                  <i className="bx bx-chevron-left"></i>
+                  <i className="bx bx-chevron-left" />
                 </button>
                 <button
                   type="button"
                   id="next-screen"
                   className="btn btn-next btn-icon btn-sm ms-2"
                 >
-                  <i className="bx bx-chevron-right"></i>
+                  <i className="bx bx-chevron-right" />
                 </button>
               </div>
             </div>
@@ -122,6 +121,5 @@ const HowItWorks = () => {
       </section>
     </div>
   );
-};
 
 export default HowItWorks;

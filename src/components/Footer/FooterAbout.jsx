@@ -1,7 +1,6 @@
 import React from "react";
 
-const FooterAbout = () => {
-  return (
+const FooterAbout = () => (
     <div>
       <footer className="footer dark-mode bg-dark border-top border-light pt-5 pb-4 pb-lg-5">
         <div className="container pt-lg-4">
@@ -29,7 +28,7 @@ const FooterAbout = () => {
                     placeholder="Your email"
                     required
                   />
-                  <i className="bx bx-envelope fs-lg text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5"></i>
+                  <i className="bx bx-envelope fs-lg text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5" />
                   <div className="invalid-tooltip position-absolute top-100 start-0">
                     Please provide a valid email address.
                   </div>
@@ -186,7 +185,7 @@ const FooterAbout = () => {
               className="nav-link d-inline-block p-0"
               href="https://createx.studio/"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               Createx Studio
             </a>
@@ -195,6 +194,5 @@ const FooterAbout = () => {
       </footer>
     </div>
   );
-};
 
 export default FooterAbout;

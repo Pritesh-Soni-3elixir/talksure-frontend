@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-has-content */
+/* eslint-disable jsx-a11y/control-has-associated-label */
 import React from "react";
 import { categories, courseDetails } from "../../data/courseData";
 
@@ -13,27 +15,25 @@ const PopularCourses = () => {
               className="nav nav-tabs flex-nowrap overflow-auto flex-md-column pb-2 pb-md-0 mb-3 mb-md-5"
               role="tablist"
             >
-              {categoriesNames.map((categoryName) => {
-                return (
-                  <li className="nav-item">
-                    <a
-                      href="#"
-                      className="nav-link d-inline-block text-nowrap "
-                      role="tab"
-                      aria-selected="true"
-                    >
-                      {categoryName}
-                    </a>
-                  </li>
-                );
-              })}
+              {categoriesNames.map((categoryName) => (
+                <li className="nav-item">
+                  <a
+                    href="#"
+                    className="nav-link d-inline-block text-nowrap "
+                    role="tab"
+                    aria-selected="true"
+                  >
+                    {categoryName}
+                  </a>
+                </li>
+              ))}
             </ul>
             <a
               href="portfolio-courses.html"
               className="btn btn-outline-primary btn-lg d-none d-md-inline-flex"
             >
               See all courses
-              <i className="bx bx-right-arrow-alt fs-xl ms-2"></i>
+              <i className="bx bx-right-arrow-alt fs-xl ms-2" />
             </a>
           </div>
 
@@ -48,14 +48,14 @@ const PopularCourses = () => {
                   id="popular-prev"
                   className="btn btn-prev btn-icon btn-sm me-2"
                 >
-                  <i className="bx bx-chevron-left"></i>
+                  <i className="bx bx-chevron-left" />
                 </button>
                 <button
                   type="button"
                   id="popular-next"
                   className="btn btn-next btn-icon btn-sm ms-2"
                 >
-                  <i className="bx bx-chevron-right"></i>
+                  <i className="bx bx-chevron-right" />
                 </button>
               </div>
             </div>
@@ -92,69 +92,59 @@ const PopularCourses = () => {
             >
               <div className="swiper-wrapper">
                 {/* Item  */}
-                {courseDetails.map((course) => {
-                  return (
-                    <div className="swiper-slide h-auto pb-3">
-                      <article className="card h-100 border-0 shadow-sm mx-2">
-                        <div className="position-relative">
-                          <a
-                            href="portfolio-single-course.html"
-                            className="d-block position-absolute w-100 h-100 top-0 start-0"
-                          ></a>
-                          <span className="badge bg-success position-absolute top-0 start-0 zindex-2 mt-3 ms-3">
-                            {course.badge}
-                          </span>
-                          <a
-                            href="#"
-                            className="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-2 me-3 mt-3"
-                            data-bs-toggle="tooltip"
-                            data-bs-placement="left"
-                            title="Save to Favorites"
-                          >
-                            <i className="bx bx-bookmark"></i>
-                          </a>
-                          <img
-                            src={course.imgSrc}
-                            className="card-img-top"
-                            alt="Image"
-                          />
+                {courseDetails.map((course) => (
+                  <div className="swiper-slide h-auto pb-3">
+                    <article className="card h-100 border-0 shadow-sm mx-2">
+                      <div className="position-relative">
+                        <a
+                          href="portfolio-single-course.html"
+                          className="d-block position-absolute w-100 h-100 top-0 start-0"
+                        />
+                        <span className="badge bg-success position-absolute top-0 start-0 zindex-2 mt-3 ms-3">
+                          {course.badge}
+                        </span>
+                        <a
+                          href="#"
+                          className="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-2 me-3 mt-3"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="left"
+                          title="Save to Favorites"
+                        >
+                          <i className="bx bx-bookmark" />
+                        </a>
+                        <img src={course.imgSrc} className="card-img-top" alt="card" />
+                      </div>
+                      <div className="card-body pb-3">
+                        <h3 className="h5 mb-2">
+                          <a href="portfolio-single-course.html">{course.name}</a>
+                        </h3>
+                        <p className="fs-sm mb-2">By {course.instructor}</p>
+                        <p className="fs-lg fw-semibold text-primary mb-0">${course.price}</p>
+                      </div>
+                      <div className="card-footer d-flex align-items-center fs-sm text-muted py-4">
+                        <div className="d-flex align-items-center me-4">
+                          <i className="bx bx-time fs-xl me-1" />
+                          {course.duration} hours
                         </div>
-                        <div className="card-body pb-3">
-                          <h3 className="h5 mb-2">
-                            <a href="portfolio-single-course.html">
-                              {course.name}
-                            </a>
-                          </h3>
-                          <p className="fs-sm mb-2">By {course.instructor}</p>
-                          <p className="fs-lg fw-semibold text-primary mb-0">
-                            ${course.price}
-                          </p>
+                        <div className="d-flex align-items-center">
+                          <i className="bx bx-like fs-xl me-1" />
+                          {course.ratings}
                         </div>
-                        <div className="card-footer d-flex align-items-center fs-sm text-muted py-4">
-                          <div className="d-flex align-items-center me-4">
-                            <i className="bx bx-time fs-xl me-1"></i>
-                            {course.duration} hours
-                          </div>
-                          <div className="d-flex align-items-center">
-                            <i className="bx bx-like fs-xl me-1"></i>
-                            {course.ratings}
-                          </div>
-                        </div>
-                      </article>
-                    </div>
-                  );
-                })}
+                      </div>
+                    </article>
+                  </div>
+                ))}
               </div>
 
               {/* Pagination (bullets)  */}
-              <div className="swiper-pagination position-relative pt-2 pt-sm-3 mt-4"></div>
+              <div className="swiper-pagination position-relative pt-2 pt-sm-3 mt-4" />
             </div>
             <a
               href="portfolio-courses.html"
               className="btn btn-outline-primary btn-lg w-100 d-md-none mt-3"
             >
               See all courses
-              <i className="bx bx-right-arrow-alt fs-xl ms-2"></i>
+              <i className="bx bx-right-arrow-alt fs-xl ms-2" />
             </a>
           </div>
         </div>

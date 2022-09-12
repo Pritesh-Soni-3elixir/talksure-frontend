@@ -1,7 +1,6 @@
 import React from "react";
 
-const SocialNetworkCarousel = () => {
-  return (
+const SocialNetworkCarousel = () => (
     <div>
       <section className="container text-center py-5 my-2 my-md-4 my-lg-5">
         <h2 className="h1 mb-4">We Have Social Networks</h2>
@@ -40,7 +39,7 @@ const SocialNetworkCarousel = () => {
                   href="#"
                   className="btn btn-icon btn-secondary btn-facebook btn-lg stretched-link"
                 >
-                  <i className="bx bxl-facebook"></i>
+                  <i className="bx bxl-facebook" />
                 </a>
                 <div className="pt-4">
                   <h6 className="mb-1">Facebook</h6>
@@ -56,7 +55,7 @@ const SocialNetworkCarousel = () => {
                   href="#"
                   className="btn btn-icon btn-secondary btn-instagram btn-lg stretched-link"
                 >
-                  <i className="bx bxl-instagram"></i>
+                  <i className="bx bxl-instagram" />
                 </a>
                 <div className="pt-4">
                   <h6 className="mb-1">Instagram</h6>
@@ -72,7 +71,7 @@ const SocialNetworkCarousel = () => {
                   href="#"
                   className="btn btn-icon btn-secondary btn-twitter btn-lg stretched-link"
                 >
-                  <i className="bx bxl-twitter"></i>
+                  <i className="bx bxl-twitter" />
                 </a>
                 <div className="pt-4">
                   <h6 className="mb-1">Twitter</h6>
@@ -88,7 +87,7 @@ const SocialNetworkCarousel = () => {
                   href="#"
                   className="btn btn-icon btn-secondary btn-linkedin btn-lg stretched-link"
                 >
-                  <i className="bx bxl-linkedin"></i>
+                  <i className="bx bxl-linkedin" />
                 </a>
                 <div className="pt-4">
                   <h6 className="mb-1">LinkedIn</h6>
@@ -104,7 +103,7 @@ const SocialNetworkCarousel = () => {
                   href="#"
                   className="btn btn-icon btn-secondary btn-youtube btn-lg stretched-link"
                 >
-                  <i className="bx bxl-youtube"></i>
+                  <i className="bx bxl-youtube" />
                 </a>
                 <div className="pt-4">
                   <h6 className="mb-1">YouTube</h6>
@@ -120,7 +119,7 @@ const SocialNetworkCarousel = () => {
                   href="#"
                   className="btn btn-icon btn-secondary btn-dribbble btn-lg stretched-link"
                 >
-                  <i className="bx bxl-dribbble"></i>
+                  <i className="bx bxl-dribbble" />
                 </a>
                 <div className="pt-4">
                   <h6 className="mb-1">Dribbble</h6>
@@ -131,11 +130,10 @@ const SocialNetworkCarousel = () => {
           </div>
 
           {/* Pagination (bullets)  */}
-          <div className="swiper-pagination position-relative bottom-0 pt-3 mt-4"></div>
+          <div className="swiper-pagination position-relative bottom-0 pt-3 mt-4" />
         </div>
       </section>
     </div>
   );
-};
 
 export default SocialNetworkCarousel;

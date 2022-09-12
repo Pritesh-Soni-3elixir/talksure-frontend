@@ -1,7 +1,6 @@
 import React from "react";
 
-const TradingFeature = () => {
-  return (
+const TradingFeature = () => (
     <div>
       <section className="container py-5 my-md-3 my-lg-4 my-xl-5">
         <div className="row align-items-center align-items-xl-end py-2 pb-sm-3">
@@ -119,6 +118,5 @@ const TradingFeature = () => {
       </section>
     </div>
   );
-};
 
 export default TradingFeature;

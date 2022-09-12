@@ -1,7 +1,6 @@
 import React from "react";
 
-const Testimonials = () => {
-  return (
+const Testimonials = () => (
     <div>
       <section className="container py-5 my-1 my-md-4 my-lg-5">
         <div className="row pt-2 py-xl-3">
@@ -22,14 +21,14 @@ const Testimonials = () => {
                 id="prev-testimonial"
                 className="btn btn-prev btn-icon btn-sm me-2"
               >
-                <i className="bx bx-chevron-left"></i>
+                <i className="bx bx-chevron-left" />
               </button>
               <button
                 type="button"
                 id="next-testimonial"
                 className="btn btn-next btn-icon btn-sm ms-2"
               >
-                <i className="bx bx-chevron-right"></i>
+                <i className="bx bx-chevron-right" />
               </button>
             </div>
           </div>
@@ -67,7 +66,7 @@ const Testimonials = () => {
                   <figure className="d-flex flex-column h-100 px-2 px-sm-0 mb-0 mx-2">
                     <div className="card h-100 position-relative border-0 shadow-sm pt-4">
                       <span className="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
-                        <i className="bx bxs-quote-left"></i>
+                        <i className="bx bxs-quote-left" />
                       </span>
                       <blockquote className="card-body pb-3 mb-0">
                         <p className="mb-0">
@@ -77,11 +76,11 @@ const Testimonials = () => {
                         </p>
                       </blockquote>
                       <div className="card-footer border-0 text-nowrap pt-0">
-                        <i className="bx bxs-star text-warning"></i>
-                        <i className="bx bxs-star text-warning"></i>
-                        <i className="bx bxs-star text-warning"></i>
-                        <i className="bx bx-star text-muted opacity-75"></i>
-                        <i className="bx bx-star text-muted opacity-75"></i>
+                        <i className="bx bxs-star text-warning" />
+                        <i className="bx bxs-star text-warning" />
+                        <i className="bx bxs-star text-warning" />
+                        <i className="bx bx-star text-muted opacity-75" />
+                        <i className="bx bx-star text-muted opacity-75" />
                       </div>
                     </div>
                     <figcaption className="ps-4 pt-4">
@@ -98,7 +97,7 @@ const Testimonials = () => {
                   <figure className="d-flex flex-column h-100 px-2 px-sm-0 mb-0 mx-2">
                     <div className="card h-100 position-relative border-0 shadow-sm pt-4">
                       <span className="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
-                        <i className="bx bxs-quote-left"></i>
+                        <i className="bx bxs-quote-left" />
                       </span>
                       <blockquote className="card-body pb-3 mb-0">
                         <p className="mb-0">
@@ -108,11 +107,11 @@ const Testimonials = () => {
                         </p>
                       </blockquote>
                       <div className="card-footer border-0 text-nowrap pt-0">
-                        <i className="bx bxs-star text-warning"></i>
-                        <i className="bx bxs-star text-warning"></i>
-                        <i className="bx bxs-star text-warning"></i>
-                        <i className="bx bxs-star text-warning"></i>
-                        <i className="bx bxs-star text-warning"></i>
+                        <i className="bx bxs-star text-warning" />
+                        <i className="bx bxs-star text-warning" />
+                        <i className="bx bxs-star text-warning" />
+                        <i className="bx bxs-star text-warning" />
+                        <i className="bx bxs-star text-warning" />
                       </div>
                     </div>
                     <figcaption className="ps-4 pt-4">
@@ -129,7 +128,7 @@ const Testimonials = () => {
                   <figure className="d-flex flex-column h-100 px-2 px-sm-0 mb-0 mx-2">
                     <div className="card h-100 position-relative border-0 shadow-sm pt-4">
                       <span className="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
-                        <i className="bx bxs-quote-left"></i>
+                        <i className="bx bxs-quote-left" />
                       </span>
                       <blockquote className="card-body pb-3 mb-0">
                         <p className="mb-0">
@@ -139,11 +138,11 @@ const Testimonials = () => {
                         </p>
                       </blockquote>
                       <div className="card-footer border-0 text-nowrap pt-0">
-                        <i className="bx bxs-star text-warning"></i>
-                        <i className="bx bxs-star text-warning"></i>
-                        <i className="bx bxs-star text-warning"></i>
-                        <i className="bx bxs-star text-warning"></i>
-                        <i className="bx bx-star text-muted opacity-75"></i>
+                        <i className="bx bxs-star text-warning" />
+                        <i className="bx bxs-star text-warning" />
+                        <i className="bx bxs-star text-warning" />
+                        <i className="bx bxs-star text-warning" />
+                        <i className="bx bx-star text-muted opacity-75" />
                       </div>
                     </div>
                     <figcaption className="ps-4 pt-4">
@@ -160,7 +159,7 @@ const Testimonials = () => {
                   <figure className="d-flex flex-column h-100 px-2 px-sm-0 mb-0 mx-2">
                     <div className="card h-100 position-relative border-0 shadow-sm pt-4">
                       <span className="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
-                        <i className="bx bxs-quote-left"></i>
+                        <i className="bx bxs-quote-left" />
                       </span>
                       <blockquote className="card-body pb-3 mb-0">
                         <p className="mb-0">
@@ -170,11 +169,11 @@ const Testimonials = () => {
                         </p>
                       </blockquote>
                       <div className="card-footer border-0 text-nowrap pt-0">
-                        <i className="bx bxs-star text-warning"></i>
-                        <i className="bx bxs-star text-warning"></i>
-                        <i className="bx bxs-star text-warning"></i>
-                        <i className="bx bxs-star text-warning"></i>
-                        <i className="bx bxs-star text-warning"></i>
+                        <i className="bx bxs-star text-warning" />
+                        <i className="bx bxs-star text-warning" />
+                        <i className="bx bxs-star text-warning" />
+                        <i className="bx bxs-star text-warning" />
+                        <i className="bx bxs-star text-warning" />
                       </div>
                     </div>
                     <figcaption className="ps-4 pt-4">
@@ -188,13 +187,12 @@ const Testimonials = () => {
               </div>
 
               {/* Pagination (bullets)  */}
-              <div className="swiper-pagination position-relative d-md-none mt-5"></div>
+              <div className="swiper-pagination position-relative d-md-none mt-5" />
             </div>
           </div>
         </div>
       </section>
     </div>
   );
-};
 
 export default Testimonials;

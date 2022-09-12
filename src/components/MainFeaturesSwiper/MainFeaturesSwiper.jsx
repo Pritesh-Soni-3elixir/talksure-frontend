@@ -1,7 +1,6 @@
 import React from "react";
 
-const MainFeaturesSwiper = () => {
-  return (
+const MainFeaturesSwiper = () => (
     <div>
       <section className="container pt-5">
         <div
@@ -41,7 +40,7 @@ const MainFeaturesSwiper = () => {
                   speed="1.25"
                   loop
                   style={{ width: "180px" }}
-                ></lottie-player>
+                 />
                 <lottie-player
                   className="d-none d-dark-mode-block mx-auto mt-4 mb-2"
                   src="assets/json/animation-feature-1-dark.json"
@@ -49,7 +48,7 @@ const MainFeaturesSwiper = () => {
                   speed="1.25"
                   loop
                   style={{ width: "180px" }}
-                ></lottie-player>
+                 />
                 <div className="card-body fs-lg fw-semibold text-center">
                   Light / Dark Mode
                 </div>
@@ -66,7 +65,7 @@ const MainFeaturesSwiper = () => {
                   speed="1.25"
                   loop
                   style={{ width: "180px" }}
-                ></lottie-player>
+                 />
                 <lottie-player
                   className="d-none d-dark-mode-block mx-auto mt-4 mb-2"
                   src="assets/json/animation-feature-2-dark.json"
@@ -74,7 +73,7 @@ const MainFeaturesSwiper = () => {
                   speed="1.25"
                   loop
                   style={{ width: "180px" }}
-                ></lottie-player>
+                 />
                 <div className="card-body fs-lg fw-semibold text-center">
                   Figma Files Included
                 </div>
@@ -91,7 +90,7 @@ const MainFeaturesSwiper = () => {
                   speed="1.25"
                   loop
                   style={{ width: "180px" }}
-                ></lottie-player>
+                 />
                 <lottie-player
                   className="d-none d-dark-mode-block mx-auto mt-4 mb-2"
                   src="assets/json/animation-feature-3-dark.json"
@@ -99,7 +98,7 @@ const MainFeaturesSwiper = () => {
                   speed="1.25"
                   loop
                   style={{ width: "180px" }}
-                ></lottie-player>
+                 />
                 <div className="card-body fs-lg fw-semibold text-center">
                   50+ UI Flexible Components
                 </div>
@@ -116,7 +115,7 @@ const MainFeaturesSwiper = () => {
                   speed="1.25"
                   loop
                   style={{ width: "180px" }}
-                ></lottie-player>
+                 />
                 <lottie-player
                   className="d-none d-dark-mode-block mx-auto mt-4 mb-2"
                   src="assets/json/animation-feature-4-dark.json"
@@ -124,7 +123,7 @@ const MainFeaturesSwiper = () => {
                   speed="1.25"
                   loop
                   style={{ width: "180px" }}
-                ></lottie-player>
+                 />
                 <div className="card-body fs-lg fw-semibold text-center">
                   Free Lifetime Updates
                 </div>
@@ -133,11 +132,10 @@ const MainFeaturesSwiper = () => {
           </div>
 
           {/* Pagination (bullets) */}
-          <div className="swiper-pagination position-relative bottom-0 mt-2"></div>
+          <div className="swiper-pagination position-relative bottom-0 mt-2" />
         </div>
       </section>
     </div>
   );
-};
 
 export default MainFeaturesSwiper;

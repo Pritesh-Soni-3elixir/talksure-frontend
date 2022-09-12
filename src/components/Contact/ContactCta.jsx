@@ -1,7 +1,6 @@
 import React from "react";
 
-const ContactCta = () => {
-  return (
+const ContactCta = () => (
     <div>
       <section className="container mt-n2">
         <div className="card border-0 bg-gradient-primary">
@@ -33,6 +32,5 @@ const ContactCta = () => {
       </section>
     </div>
   );
-};
 
 export default ContactCta;

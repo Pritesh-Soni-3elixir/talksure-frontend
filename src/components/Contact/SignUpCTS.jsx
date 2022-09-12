@@ -1,38 +1,36 @@
 import React from "react";
 
-const SignUpCTS = () => {
-  return (
-    // Sign up CTA
-    <div class="bg-secondary rounded-3 my-2 my-md-4 my-lg-5 py-5 px-3 px-md-0">
-      <div class="row align-items-center">
-        <div class="col-md-5 offset-lg-1 text-center text-md-start ps-md-5 ps-lg-0 ps-xl-5 pb-2 pb-md-0 mb-4 mb-md-0">
-          <p class="lead mb-3">Ready to get started?</p>
-          <h2 class="h1 pb-2 pb-md-4">
-            Take Your <span class="text-primary">Skills</span> to the Next Level
-          </h2>
-          <a href="#" class="btn btn-primary btn-lg">
-            Sign up now!
-          </a>
-        </div>
-        <div class="col-lg-6 col-md-7">
-          <div class="d-table mx-auto">
-            <img
-              src="assets/img/landing/online-courses/steps/04-dark.svg"
-              class="d-dark-mode-none"
-              width="380"
-              alt="Illustration"
-            />
-            <img
-              src="assets/img/landing/online-courses/steps/04-light.svg"
-              class="d-none d-dark-mode-block"
-              width="380"
-              alt="Illustration"
-            />
-          </div>
+const SignUpCTS = () => (
+  // Sign up CTA
+  <div className="bg-secondary rounded-3 my-2 my-md-4 my-lg-5 py-5 px-3 px-md-0">
+    <div className="row align-items-center">
+      <div className="col-md-5 offset-lg-1 text-center text-md-start ps-md-5 ps-lg-0 ps-xl-5 pb-2 pb-md-0 mb-4 mb-md-0">
+        <p className="lead mb-3">Ready to get started?</p>
+        <h2 className="h1 pb-2 pb-md-4">
+          Take Your <span className="text-primary">Skills</span> to the Next Level
+        </h2>
+        <a href="#" className="btn btn-primary btn-lg">
+          Sign up now!
+        </a>
+      </div>
+      <div className="col-lg-6 col-md-7">
+        <div className="d-table mx-auto">
+          <img
+            src="assets/img/landing/online-courses/steps/04-dark.svg"
+            className="d-dark-mode-none"
+            width="380"
+            alt="Illustration"
+          />
+          <img
+            src="assets/img/landing/online-courses/steps/04-light.svg"
+            className="d-none d-dark-mode-block"
+            width="380"
+            alt="Illustration"
+          />
         </div>
       </div>
     </div>
-  );
-};
+  </div>
+);
 
 export default SignUpCTS;

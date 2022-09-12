@@ -1,7 +1,6 @@
 import React from "react";
 
-const FooterContact = () => {
-  return (
+const FooterContact = () => (
     <footer className="footer pt-5 pb-4 pb-lg-5">
       <div className="container pt-lg-4">
         <div className="row pb-5">
@@ -16,8 +15,8 @@ const FooterContact = () => {
               sit. Non feugiat feugiat egestas nulla nec. Arcu tempus, eget
               elementum dolor ullamcorper sodales ultrices eros.
             </p>
-            <form className="needs-validation" novalidate>
-              <label for="subscr-email" className="form-label">
+            <form className="needs-validation" noValidate>
+              <label htmlFor="subscr-email" className="form-label">
                 Subscribe to our newsletter
               </label>
               <div className="input-group">
@@ -28,7 +27,7 @@ const FooterContact = () => {
                   placeholder="Your email"
                   required
                 />
-                <i className="bx bx-envelope fs-lg text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5"></i>
+                <i className="bx bx-envelope fs-lg text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5" />
                 <div className="invalid-tooltip position-absolute top-100 start-0">
                   Please provide a valid email address.
                 </div>
@@ -183,7 +182,7 @@ const FooterContact = () => {
             className="nav-link d-inline-block p-0"
             href="https://createx.studio/"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
           >
             Createx Studio
           </a>
@@ -191,6 +190,5 @@ const FooterContact = () => {
       </div>
     </footer>
   );
-};
 
 export default FooterContact;

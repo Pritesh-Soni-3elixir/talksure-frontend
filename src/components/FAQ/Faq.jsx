@@ -1,7 +1,6 @@
 import React from "react";
 
-const Faq = () => {
-  return (
+const Faq = () => (
     <div>
       <section className="container py-5 mb-lg-2">
         <div className="row py-2 py-md-4 py-lg-5">
@@ -17,11 +16,11 @@ const Faq = () => {
               <div className="col">
                 <div className="card card-hover">
                   <div className="card-body pb-3">
-                    <i className="bx bxs-phone-call d-block fs-2 text-primary mb-2 py-1"></i>
+                    <i className="bx bxs-phone-call d-block fs-2 text-primary mb-2 py-1" />
                     <p className="fs-sm mb-2">Still have questions?</p>
                     <a href="#" className="btn btn-link stretched-link px-0">
                       Call us
-                      <i className="bx bx-right-arrow-alt fs-xl ms-2"></i>
+                      <i className="bx bx-right-arrow-alt fs-xl ms-2" />
                     </a>
                   </div>
                 </div>
@@ -29,14 +28,14 @@ const Faq = () => {
               <div className="col">
                 <div className="card card-hover">
                   <div className="card-body pb-3">
-                    <i className="bx bx-message-rounded-dots d-block fs-2 text-success mb-2 py-1"></i>
+                    <i className="bx bx-message-rounded-dots d-block fs-2 text-success mb-2 py-1" />
                     <p className="fs-sm mb-2">Still have questions?</p>
                     <a
                       href="#"
                       className="btn btn-link text-success stretched-link px-0"
                     >
                       Chat with us
-                      <i className="bx bx-right-arrow-alt fs-xl ms-2"></i>
+                      <i className="bx bx-right-arrow-alt fs-xl ms-2" />
                     </a>
                   </div>
                 </div>
@@ -292,6 +291,5 @@ const Faq = () => {
       </section>
     </div>
   );
-};
 
 export default Faq;

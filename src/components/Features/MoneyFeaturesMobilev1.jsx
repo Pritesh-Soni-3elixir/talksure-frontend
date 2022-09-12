@@ -1,7 +1,6 @@
 import React from "react";
 
-const MoneyFeaturesMobilev1 = () => {
-  return (
+const MoneyFeaturesMobilev1 = () => (
     <div>
       <section className="container pt-5 pb-2 pb-md-3 py-lg-5">
         <div className="row align-items-center my-3 py-md-3 py-lg-5">
@@ -35,21 +34,21 @@ const MoneyFeaturesMobilev1 = () => {
             <h2 className="pb-3">Make your money transfer simple and clear</h2>
             <ul className="list-unstyled pb-3 mb-3">
               <li className="d-flex align-items-center mb-2">
-                <i className="bx bx-check-circle fs-xl text-primary me-2"></i>
+                <i className="bx bx-check-circle fs-xl text-primary me-2" />
                 Banking transactions are free for you
               </li>
               <li className="d-flex align-items-center mb-2">
-                <i className="bx bx-check-circle fs-xl text-primary me-2"></i>
+                <i className="bx bx-check-circle fs-xl text-primary me-2" />
                 No monthly cash commission
               </li>
               <li className="d-flex align-items-center mb-2">
-                <i className="bx bx-check-circle fs-xl text-primary me-2"></i>
+                <i className="bx bx-check-circle fs-xl text-primary me-2" />
                 Manage payments and transactions online
               </li>
             </ul>
             <a href="#" className="btn btn-primary">
               Learn more
-              <i className="bx bx-right-arrow-alt fs-xl ms-2 me-n1"></i>
+              <i className="bx bx-right-arrow-alt fs-xl ms-2 me-n1" />
             </a>
           </div>
         </div>
@@ -112,15 +111,14 @@ const MoneyFeaturesMobilev1 = () => {
             </div>
             <a href="#" className="btn btn-primary">
               Learn more
-              <i className="bx bx-right-arrow-alt fs-xl ms-2 me-n1"></i>
+              <i className="bx bx-right-arrow-alt fs-xl ms-2 me-n1" />
             </a>
           </div>
         </div>
         {/* Extra spacing for dark mode only  */}
-        <div className="pt-5 d-none d-dark-mode-block"></div>
+        <div className="pt-5 d-none d-dark-mode-block" />
       </section>
     </div>
   );
-};
 
 export default MoneyFeaturesMobilev1;

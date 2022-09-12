@@ -1,7 +1,6 @@
 import React from "react";
 
-const HowItWorksSlider = () => {
-  return (
+const HowItWorksSlider = () => (
     <div>
       <section className="position-relative bg-secondary py-5">
         <div className="container mt-3 pt-md-2 pt-lg-4 pb-2 pb-md-4 pb-lg-5">
@@ -15,14 +14,14 @@ const HowItWorksSlider = () => {
               id="prev-screen"
               className="btn btn-prev btn-icon position-absolute top-50 start-0 ms-n5 translate-middle-y"
             >
-              <i className="bx bx-chevron-left"></i>
+              <i className="bx bx-chevron-left" />
             </button>
             <button
               type="button"
               id="next-screen"
               className="btn btn-next btn-icon position-absolute top-50 end-0 me-n5 translate-middle-y"
             >
-              <i className="bx bx-chevron-right"></i>
+              <i className="bx bx-chevron-right" />
             </button>
 
             {/* Phone frame  */}
@@ -34,7 +33,7 @@ const HowItWorksSlider = () => {
                   backgroundImage:
                     "url(assets/img/landing/app-showcase/screens/phone-frame.png)",
                 }}
-              ></div>
+               />
             </div>
 
             {/* Phone screen  */}
@@ -46,7 +45,7 @@ const HowItWorksSlider = () => {
                   backgroundImage:
                     "url(assets/img/landing/app-showcase/screens/phone-screen.png)",
                 }}
-              ></div>
+               />
             </div>
 
             {/* Swiper slider  */}
@@ -168,10 +167,9 @@ const HowItWorksSlider = () => {
           id="swiper-progress"
           className="swiper-pagination bottom-0"
           style={{ top: "auto" }}
-        ></div>
+         />
       </section>
     </div>
   );
-};
 
 export default HowItWorksSlider;

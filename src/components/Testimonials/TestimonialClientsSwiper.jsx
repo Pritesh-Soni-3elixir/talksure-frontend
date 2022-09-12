@@ -1,13 +1,12 @@
 import React from "react";
 
-const TestimonialClientsSwiper = () => {
-  return (
+const TestimonialClientsSwiper = () => (
     <div>
       <section className="container">
         <div className="row">
           <div className="col-md-5">
             <div className="card h-100 border-0 overflow-hidden px-md-4">
-              <span className="bg-gradient-primary position-absolute top-0 start-0 w-100 h-100 opacity-10 d-none d-md-block"></span>
+              <span className="bg-gradient-primary position-absolute top-0 start-0 w-100 h-100 opacity-10 d-none d-md-block" />
               <div className="card-body d-flex flex-column align-items-center justify-content-center position-relative zindex-2 p-0 pb-2 p-lg-4">
                 <h2 className="h1 text-center text-md-start p-lg-4">
                   What Our Clients Say About Silicon Studio
@@ -19,7 +18,7 @@ const TestimonialClientsSwiper = () => {
             <div className="card border-0 shadow-sm p-4 p-xxl-5">
               <div className="d-flex justify-content-between pb-4 mb-2">
                 <span className="btn btn-icon btn-primary btn-lg shadow-primary pe-none">
-                  <i className="bx bxs-quote-left"></i>
+                  <i className="bx bxs-quote-left" />
                 </span>
                 <div className="d-flex">
                   <button
@@ -27,14 +26,14 @@ const TestimonialClientsSwiper = () => {
                     id="testimonials-prev"
                     className="btn btn-prev btn-icon btn-sm me-2"
                   >
-                    <i className="bx bx-chevron-left"></i>
+                    <i className="bx bx-chevron-left" />
                   </button>
                   <button
                     type="button"
                     id="testimonials-next"
                     className="btn btn-next btn-icon btn-sm ms-2"
                   >
-                    <i className="bx bx-chevron-right"></i>
+                    <i className="bx bx-chevron-right" />
                   </button>
                 </div>
               </div>
@@ -153,7 +152,7 @@ const TestimonialClientsSwiper = () => {
                 </div>
 
                 {/* Pagination (bullets) */}
-                <div className="swiper-pagination position-relative mt-5"></div>
+                <div className="swiper-pagination position-relative mt-5" />
               </div>
             </div>
           </div>
@@ -161,6 +160,5 @@ const TestimonialClientsSwiper = () => {
       </section>
     </div>
   );
-};
 
 export default TestimonialClientsSwiper;

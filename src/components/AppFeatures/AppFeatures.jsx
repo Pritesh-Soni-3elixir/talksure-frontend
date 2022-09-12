@@ -1,7 +1,6 @@
 import React from "react";
 
-const AppFeatures = () => {
-  return (
+const AppFeatures = () => (
     <div>
       <section
         id="features"
@@ -158,6 +157,5 @@ const AppFeatures = () => {
       </section>
     </div>
   );
-};
 
 export default AppFeatures;

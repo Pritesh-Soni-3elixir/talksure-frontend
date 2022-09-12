@@ -1,7 +1,6 @@
 import React from "react";
 
-const Subscription = () => {
-  return (
+const Subscription = () => (
     <div>
       <section className="container">
         <div className="bg-secondary rounded-3 py-5 px-3 px-sm-4 px-lg-5 px-xl-0">
@@ -34,7 +33,7 @@ const Subscription = () => {
                     placeholder="Your email"
                     required
                   />
-                  <i className="bx bx-envelope fs-xl text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5"></i>
+                  <i className="bx bx-envelope fs-xl text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5" />
                   <div className="invalid-tooltip position-absolute top-100 start-0">
                     Please provide a valid email address.
                   </div>
@@ -49,6 +48,5 @@ const Subscription = () => {
       </section>
     </div>
   );
-};
 
 export default Subscription;

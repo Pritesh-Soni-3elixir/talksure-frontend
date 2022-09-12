@@ -1,7 +1,6 @@
 import React from "react";
 
-const EmailPhone = () => {
-  return (
+const EmailPhone = () => (
     <div>
       <section className="container py-5 my-md-2 my-lg-4 my-xl-5">
         <div className="row justify-content-center pt-5 pb-1 pb-sm-2 pb-md-3">
@@ -10,7 +9,7 @@ const EmailPhone = () => {
               <div className="d-flex flex-column w-sm-50 border-0 bg-transparent text-center px-sm-1 px-md-5 pb-3 pb-sm-0 mb-4 mb-sm-0">
                 <div className="card-body p-0">
                   <div className="d-inline-block bg-secondary text-primary rounded-circle fs-3 lh-1 p-3 mb-3">
-                    <i className="bx bx-envelope"></i>
+                    <i className="bx bx-envelope" />
                   </div>
                   <p className="pb-2 pb-sm-3 mb-3">
                     Please feel free to drop us a line. We will respond as soon
@@ -26,11 +25,11 @@ const EmailPhone = () => {
                   </a>
                 </div>
               </div>
-              <div className="vr text-border d-none d-sm-inline-block m-4"></div>
+              <div className="vr text-border d-none d-sm-inline-block m-4" />
               <div className="card w-sm-50 border-0 bg-transparent text-center px-sm-1 px-md-5">
                 <div className="card-body p-0">
                   <div className="d-inline-block bg-secondary text-primary rounded-circle fs-3 lh-1 p-3 mb-3">
-                    <i className="bx bx-phone-call"></i>
+                    <i className="bx bx-phone-call" />
                   </div>
                   <p className="pb-2 pb-sm-3 mb-3">
                     If you need immediate assistance feel free to call us any
@@ -49,6 +48,5 @@ const EmailPhone = () => {
       </section>
     </div>
   );
-};
 
 export default EmailPhone;

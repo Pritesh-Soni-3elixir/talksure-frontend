@@ -1,7 +1,6 @@
 import React from "react";
 
-const Ratings = () => {
-  return (
+const Ratings = () => (
     <div>
       <section
         className="py-5 mb-md-2"
@@ -24,14 +23,14 @@ const Ratings = () => {
                   id="prev-review"
                   className="btn btn-prev btn-icon btn-sm me-3"
                 >
-                  <i className="bx bx-chevron-left"></i>
+                  <i className="bx bx-chevron-left" />
                 </button>
                 <button
                   type="button"
                   id="next-review"
                   className="btn btn-next btn-icon btn-sm"
                 >
-                  <i className="bx bx-chevron-right"></i>
+                  <i className="bx bx-chevron-right" />
                 </button>
               </div>
             </div>
@@ -58,15 +57,15 @@ const Ratings = () => {
                       <div className="d-flex flex-column h-100 px-2 px-sm-0 mb-0">
                         <div className="card h-100 position-relative border-0 shadow-sm pt-4">
                           <span className="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
-                            <i className="bx bxs-quote-left"></i>
+                            <i className="bx bxs-quote-left" />
                           </span>
                           <blockquote className="card-body pb-4 mb-0">
                             <div className="text-nowrap pt-1 mb-3">
-                              <i className="bx bxs-star text-warning"></i>
-                              <i className="bx bxs-star text-warning"></i>
-                              <i className="bx bxs-star text-warning"></i>
-                              <i className="bx bx-star text-muted opacity-75"></i>
-                              <i className="bx bx-star text-muted opacity-75"></i>
+                              <i className="bx bxs-star text-warning" />
+                              <i className="bx bxs-star text-warning" />
+                              <i className="bx bxs-star text-warning" />
+                              <i className="bx bx-star text-muted opacity-75" />
+                              <i className="bx bx-star text-muted opacity-75" />
                             </div>
                             <p className="fs-lg mb-0">
                               Sit pretium aliquam tempor, orci dolor sed
@@ -99,15 +98,15 @@ const Ratings = () => {
                       <div className="d-flex flex-column h-100 px-2 px-sm-0 mb-0">
                         <div className="card h-100 position-relative border-0 shadow-sm pt-4">
                           <span className="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
-                            <i className="bx bxs-quote-left"></i>
+                            <i className="bx bxs-quote-left" />
                           </span>
                           <blockquote className="card-body pb-4 mb-0">
                             <div className="text-nowrap pt-1 mb-3">
-                              <i className="bx bxs-star text-warning"></i>
-                              <i className="bx bxs-star text-warning"></i>
-                              <i className="bx bxs-star text-warning"></i>
-                              <i className="bx bxs-star text-warning"></i>
-                              <i className="bx bxs-star text-warning"></i>
+                              <i className="bx bxs-star text-warning" />
+                              <i className="bx bxs-star text-warning" />
+                              <i className="bx bxs-star text-warning" />
+                              <i className="bx bxs-star text-warning" />
+                              <i className="bx bxs-star text-warning" />
                             </div>
                             <p className="fs-lg mb-0">
                               Nunc senectus leo vel venenatis accumsan
@@ -142,15 +141,15 @@ const Ratings = () => {
                       <div className="d-flex flex-column h-100 px-2 px-sm-0 mb-0">
                         <div className="card h-100 position-relative border-0 shadow-sm pt-4">
                           <span className="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
-                            <i className="bx bxs-quote-left"></i>
+                            <i className="bx bxs-quote-left" />
                           </span>
                           <blockquote className="card-body pb-4 mb-0">
                             <div className="text-nowrap pt-1 mb-3">
-                              <i className="bx bxs-star text-warning"></i>
-                              <i className="bx bxs-star text-warning"></i>
-                              <i className="bx bxs-star text-warning"></i>
-                              <i className="bx bxs-star text-warning"></i>
-                              <i className="bx bx-star text-muted opacity-75"></i>
+                              <i className="bx bxs-star text-warning" />
+                              <i className="bx bxs-star text-warning" />
+                              <i className="bx bxs-star text-warning" />
+                              <i className="bx bxs-star text-warning" />
+                              <i className="bx bx-star text-muted opacity-75" />
                             </div>
                             <p className="fs-lg mb-0">
                               Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -184,15 +183,15 @@ const Ratings = () => {
                       <div className="d-flex flex-column h-100 px-2 px-sm-0 mb-0">
                         <div className="card h-100 position-relative border-0 shadow-sm pt-4">
                           <span className="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
-                            <i className="bx bxs-quote-left"></i>
+                            <i className="bx bxs-quote-left" />
                           </span>
                           <blockquote className="card-body pb-4 mb-0">
                             <div className="text-nowrap pt-1 mb-3">
-                              <i className="bx bxs-star text-warning"></i>
-                              <i className="bx bxs-star text-warning"></i>
-                              <i className="bx bxs-star text-warning"></i>
-                              <i className="bx bxs-star text-warning"></i>
-                              <i className="bx bxs-star text-warning"></i>
+                              <i className="bx bxs-star text-warning" />
+                              <i className="bx bxs-star text-warning" />
+                              <i className="bx bxs-star text-warning" />
+                              <i className="bx bxs-star text-warning" />
+                              <i className="bx bxs-star text-warning" />
                             </div>
                             <p className="fs-lg mb-0">
                               Etiam augue ante, imperdiet et nunc sed, bibendum
@@ -229,6 +228,5 @@ const Ratings = () => {
       </section>
     </div>
   );
-};
 
 export default Ratings;

@@ -1,7 +1,6 @@
 import React from "react";
 
-const HeroMobilev2 = () => {
-  return (
+const HeroMobilev2 = () => (
     <div>
       <section className="container py-5 mt-5 mt-md-4 mb-md-3 mb-lg-4 mb-xl-5">
         <div className="row align-items-center align-items-lg-stretch mb-2 mb-sm-3">
@@ -14,7 +13,7 @@ const HeroMobilev2 = () => {
               <div
                 className="bg-gradient-primary position-absolute start-0 bottom-0 w-100 rounded-3 opacity-15"
                 style={{ height: "95%" }}
-              ></div>
+               />
               <div className="parallax zindex-2">
                 <div className="parallax-layer zindex-2 mb-n3" data-depth="0.1">
                   <img
@@ -85,7 +84,7 @@ const HeroMobilev2 = () => {
                 <div className="h1 mb-0">23k+</div>
                 <div className="ps-2 ms-1">downloads of the application</div>
               </div>
-              <div className="vr d-none d-sm-block text-border my-2 mx-4"></div>
+              <div className="vr d-none d-sm-block text-border my-2 mx-4" />
               <div className="d-flex align-items-center w-100 ps-xxl-2">
                 <div className="h1 mb-0">13b+</div>
                 <div className="ps-2 ms-1">trading volume per every day</div>
@@ -96,6 +95,5 @@ const HeroMobilev2 = () => {
       </section>
     </div>
   );
-};
 
 export default HeroMobilev2;

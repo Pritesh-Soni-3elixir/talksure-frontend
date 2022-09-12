@@ -1,7 +1,6 @@
 import React from "react";
 
-const Footer = () => {
-  return (
+const Footer = () => (
     <div>
       <footer className="footer border-top pt-5 pb-4 pb-lg-5">
         <div className="container text-center pt-2 pt-md-4 pt-lg-5 pb-xl-3">
@@ -25,7 +24,7 @@ const Footer = () => {
                       placeholder="Your email"
                       required
                     />
-                    <i className="bx bx-envelope fs-xl text-muted position-absolute top-50 start-0 translate-middle-y ms-3"></i>
+                    <i className="bx bx-envelope fs-xl text-muted position-absolute top-50 start-0 translate-middle-y ms-3" />
                   </div>
                   <button
                     className="btn btn-primary shadow-primary btn-lg"
@@ -51,20 +50,20 @@ const Footer = () => {
                   *Enjoy using Silicon Template and stay tuned for the latest
                   updates and news.
                 </p>
-                <div className="subscription-status position-absolute top-100 start-50 translate-middle-x"></div>
+                <div className="subscription-status position-absolute top-100 start-50 translate-middle-x" />
               </form>
             </div>
           </div>
           <div className="pt-5 mt-lg-3 mt-xl-4">
             <p className="text-muted mb-0">
               &copy; All rights reserved. Made with
-              <i className="bx bx-heart d-inline-block fs-lg text-gradient-primary align-middle mt-n1 mx-1"></i>
+              <i className="bx bx-heart d-inline-block fs-lg text-gradient-primary align-middle mt-n1 mx-1" />
               by&nbsp;
               <a
                 href="https://createx.studio/"
                 className="text-muted"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 Createx Studio
               </a>
@@ -74,6 +73,5 @@ const Footer = () => {
       </footer>
     </div>
   );
-};
 
 export default Footer;

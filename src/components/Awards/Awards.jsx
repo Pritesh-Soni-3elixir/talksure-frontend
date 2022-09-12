@@ -1,7 +1,6 @@
 import React from "react";
 
-const Awards = () => {
-  return (
+const Awards = () => (
     <div>
       <section className="container mb-5 pb-3 pb-md-4 pb-lg-5">
         <div className="row gy-4 py-xl-2">
@@ -82,6 +81,5 @@ const Awards = () => {
       </section>
     </div>
   );
-};
 
 export default Awards;

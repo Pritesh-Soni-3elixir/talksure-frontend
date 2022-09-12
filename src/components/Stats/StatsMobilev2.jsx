@@ -1,10 +1,9 @@
 import React from "react";
 
-const StatsMobilev2 = () => {
-  return (
+const StatsMobilev2 = () => (
     <div>
       <section className="dark-mode bg-dark position-relative pt-5 pb-4 py-md-5">
-        <div className="position-absolute top-0 start-0 w-100 h-100 bg-secondary"></div>
+        <div className="position-absolute top-0 start-0 w-100 h-100 bg-secondary" />
         <div className="container position-relative zindex-3 py-lg-4 pt-md-2 py-xl-5 mb-lg-4">
           {/* Title */}
           <div className="row justify-content-center text-center pb-4 mb-2">
@@ -203,6 +202,5 @@ const StatsMobilev2 = () => {
       </section>
     </div>
   );
-};
 
 export default StatsMobilev2;

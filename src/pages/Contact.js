@@ -5,21 +5,19 @@ import HeroContact from "../components/Hero/HeroContact";
 import Navbar from "../components/Navbar/Navbar";
 import SocialNetworkCarousel from "../components/SocialNetwork/SocialNetworkCarousel";
 
-const Contact = () => {
-  return (
+const Contact = () => (
+  <div>
     <div>
-      <div>
-        {/* <PageLoadingSpinner /> */}
-        <main className="page-wrapper">
-          <Navbar />
-          <HeroContact />
-          <EmailPhone />
-          <SocialNetworkCarousel />
-        </main>
-        <FooterContact />
-      </div>
+      {/* <PageLoadingSpinner /> */}
+      <main className="page-wrapper">
+        <Navbar />
+        <HeroContact />
+        <EmailPhone />
+        <SocialNetworkCarousel />
+      </main>
+      <FooterContact />
     </div>
-  );
-};
+  </div>
+);
 
 export default Contact;

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const HeroAbout = () => (
   <div>
@@ -20,12 +21,9 @@ const HeroAbout = () => (
             <nav className="pt-md-2 pt-lg-3 pb-4 pb-md-5 mb-xl-4" aria-label="breadcrumb">
               <ol className="breadcrumb mb-0">
                 <li className="breadcrumb-item">
-                  <a href="index-2.html">
-                    <i className="bx bx-home-alt fs-lg me-1" />
-                    Home
-                  </a>
+                  <Link to="/home">Home</Link>
                 </li>
-                <li className="breadcrumb-item active" aria-current="page">
+                <li className="breadcrumb-item" aria-current="page">
                   About v.1
                 </li>
               </ol>

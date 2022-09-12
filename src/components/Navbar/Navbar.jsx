@@ -52,7 +52,7 @@ const NavbarAbout = () => (
                 </div>
               </li>
               <li className="nav-item dropdown">
-                <a href="#" className="nav-link dropdown-toggle active" data-bs-toggle="dropdown">
+                <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                   Pages
                 </a>
                 <div className="dropdown-menu">
@@ -108,11 +108,11 @@ const NavbarAbout = () => (
                       Sign In
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link to="/signup" className="dropdown-item">
                       Sign Up
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </li>
             </ul>

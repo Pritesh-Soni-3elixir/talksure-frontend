@@ -11,12 +11,16 @@ import TermsAndCondition from "./pages/TermsAndCondition";
 import LandingOnlineCourses from "./pages/LandingOnlineCourses";
 import PortfolioCourses from "./pages/PortfolioCourses";
 import HostForm from "./pages/HostForm";
+import SignIn from "./pages/SignIn";
 
 function App() {
   return (
     <div>
       {/* the first match will be rendered, so more specific path should be on top */}
       <Switch>
+        <Route path="/signin">
+          <SignIn />
+        </Route>
         <Route path="/host-form">
           <HostForm />
         </Route>

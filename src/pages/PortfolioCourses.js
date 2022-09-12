@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import SignUpCTS from "../components/Contact/SignUpCTS";
 import CoursesList from "../components/CoursesList/CoursesList";
 import Footer from "../components/Footer/Footer";
@@ -13,12 +14,9 @@ const PortfolioCourses = () => (
         <nav className="pt-4 mt-lg-3" aria-label="breadcrumb">
           <ol className="breadcrumb mb-0">
             <li className="breadcrumb-item">
-              <a href="landing-online-courses.html">
-                <i className="bx bx-home-alt fs-lg me-1" />
-                Home
-              </a>
+              <Link to="/home">Home</Link>
             </li>
-            <li className="breadcrumb-item active" aria-current="page">
+            <li className="breadcrumb-item" aria-current="page">
               Courses
             </li>
           </ol>
